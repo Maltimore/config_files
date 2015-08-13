@@ -114,10 +114,5 @@ if ! shopt -oq posix; then
 fi
 
 
-# das hier ist von mir dazugeschrieben
-#export PYTHONPATH='~/Programme'
-#habe aber tor-browser geloescht oder so..
-#export PATH=$PATH:~/Programme/tor-browser_en-US
-
 # added by Miniconda3 3.10.1 installer
-export PATH="/home/maltimore/programs/miniconda3/bin:$PATH"
+export PATH="/home/maltimore/miniconda3/bin:$PATH"
