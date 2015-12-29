@@ -1,0 +1,19 @@
+#!/bin/bash
+
+cd ~
+git init
+git remote add origin https://github.com/Maltimore/dotfiles.git
+rm .bashrc
+git pull origin master
+
+# download pathogen plugin for vim
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+# download conqueterm plugin for vim
+mkdir -p ~/.vim/bundle
+curl -LSso ~/.vim/bundle/conqueterm.tar.gz https://conque.googlecode.com/files/conque_2.3.tar.gz
+tar zxvf ~/.vim/bundle/conqueterm.tar.gz 
+
+# install tmux
+sudo apt-get install tmux

@@ -5,9 +5,14 @@
 
 " remap o so that it doesn't go to insert mode
 :map o o<esc>
-
+" remap jk to exit insert mode
+:imap jk <C-[>
 " remap [ so that it behaves as <del> in other editors
 :nmap [ <C-[>lxh
+" remap sl so that i can use it for the command to switch buffers
+:nmap sl <C-w>
+
+
 
 " ConqueTerm stuff
 let g:ConqueTerm_SendVisKey = '<Space>'
