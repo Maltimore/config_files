@@ -1,8 +1,14 @@
+" OPTIONS
 " set tabstop width etc.
 :set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 " show line numbering
 :set number
+filetype off
+filetype plugin indent on
+syntax on
 
+
+" REMAPPING
 " remap o so that it doesn't go to insert mode
 :map o o<esc>
 " remap jk to exit insert mode
@@ -13,38 +19,40 @@
 :nmap sl <C-w>
 
 
+" COMMANDS
+:command Bash ConqueTerm bash
+:command Ipython ConqueTerm ipython
 
-" ConqueTerm stuff
+
+" VUNDLE
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Maltimore/conque'
+Plugin 'Maltimore/python-mode'
+Plugin 'Maltimore/vim-latex'
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+" end of VUNDLE
+
+
+" CONQUETERM
 let g:ConqueTerm_SendVisKey = '<Space>'
 
 
-"The following is for the pymode plugin
-"Pathogen load
-filetype off
-call pathogen#infect()
-call pathogen#helptags()
-filetype plugin indent on
-syntax on
-
-
+" PYMODE
 let g:pymode_rope = 0
 
-" ALL THE REST IS JUST ABOUT VIM-LATEX
+
+" VIM-LATEX
 " REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
 filetype plugin on
-
-" IMPORTANT: win32 users will need to have 'shellslash' set so that latex
-" can be called correctly.
-set shellslash
-
 " IMPORTANT: grep will sometimes skip displaying the file name if you
 " search in a singe file. This will confuse Latex-Suite. Set your grep
 " program to always generate a file-name.
 set grepprg=grep\ -nH\ $*
-
-" OPTIONAL: This enables automatic indentation as you type.
-filetype indent on
-
 " OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
