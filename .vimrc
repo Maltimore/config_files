@@ -11,6 +11,7 @@ syntax on
 " REMAPPING
 " remap o so that it doesn't go to insert mode
 :map o o<esc>
+:map O O<esc>
 " remap jk to exit insert mode
 :imap jk <C-[>
 " remap [ so that it behaves as <del> in other editors
@@ -44,7 +45,11 @@ let g:ConqueTerm_SendVisKey = '<Space>'
 
 " PYMODE
 let g:pymode_rope = 0
-
+let g:pymode_folding = 1
+let g:pymode_indent = 1
+let g:pymode_run = 1
+let g:pymode_run_bind = '<leader>r'
+let g:pymode_rope_completion = 1
 
 " VIM-LATEX
 " REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.

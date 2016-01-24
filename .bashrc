@@ -115,5 +115,5 @@ fi
 
 
 # added by Miniconda3 3.10.1 installer
-export PATH="/home/malte/miniconda3/bin:$PATH"
+export PATH="/home/maltimore/miniconda3/bin:$PATH"
 
