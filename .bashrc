@@ -113,7 +113,4 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
-# added by Miniconda3 3.10.1 installer
-export PATH="/home/maltimore/miniconda3/bin:$PATH"
-
+export PATH="/home/$USER/miniconda3/bin:$PATH"
