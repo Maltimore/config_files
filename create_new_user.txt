@@ -8,7 +8,7 @@ git pull origin master
 
 # install vundle by just cloning it into the .vim/bundle directory
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-# remember to run :PluginInstall in vim to have vundle install the plugins
+# run :PluginInstall so that vundle installs the plugins
 
 # install tmux
 sudo apt-get install tmux
