@@ -65,3 +65,8 @@ let g:tex_flavor='latex'
 
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_MultipleCompileFormats='pdf, aux'
+
+" let latex suite ignore warnings from the tex compiler
+let g:Tex_IgnoredWarnings = 
+	\'Font Warning'."\n"
+let g:Tex_IgnoreLevel = 8
