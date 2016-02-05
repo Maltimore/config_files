@@ -7,6 +7,12 @@ filetype off
 filetype plugin indent on
 syntax on
 
+" Uncomment the following to have Vim jump to the last position when
+" reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
+endif
 
 " REMAPPING
 " remap o so that it doesn't go to insert mode
