@@ -40,6 +40,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Maltimore/conque'
 Plugin 'Maltimore/python-mode'
 Plugin 'Maltimore/vim-latex'
+Plugin 'tpope/vim-surround'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 " end of VUNDLE
