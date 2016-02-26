@@ -113,4 +113,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="/home/$USER/miniconda3/bin:$PATH"
+export PATH="$HOME/miniconda3/bin:$PATH"
+source activate brian2env
