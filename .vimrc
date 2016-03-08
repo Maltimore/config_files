@@ -24,6 +24,8 @@ endif
 :nmap [ <C-[>lxh
 " remap sl so that i can use it for the command to switch buffers
 :nmap sl <C-w>
+" only works in neovim, set 'jk' to exit terminal mode
+:tnoremap jk <C-\><C-n>
 
 
 " COMMANDS
@@ -71,9 +73,15 @@ set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 
 let g:Tex_DefaultTargetFormat = 'pdf'
-let g:Tex_MultipleCompileFormats='pdf, aux'
+let g:Tex_MultipleCompileFormats='pdf, bib,pdf'
+" let g:Tex_MultipleCompileFormats='pdf, aux'
 
 " let latex suite ignore warnings from the tex compiler
 let g:Tex_IgnoredWarnings = 
 	\'Font Warning'."\n"
 let g:Tex_IgnoreLevel = 8
+
+
+
+" specifically for neovim:
+let

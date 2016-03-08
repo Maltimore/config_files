@@ -23,7 +23,7 @@ sudo apt-get install python-dev python-pip python3-dev python3-pip
 sudo apt-get install tmux
 # use .vimrc as configuration
 mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
-ln -s ~/.vim $XDG_CONFIG_HOME/nvimln -s ~/.vim $XDG_CONFIG_HOME/nvim
+ln -s ~/.vim $XDG_CONFIG_HOME/nvim
 ln -s ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
 
 # install tmux
