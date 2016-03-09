@@ -41,7 +41,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'Maltimore/conque'
+" Plugin 'Maltimore/conque'
 Plugin 'Maltimore/python-mode'
 Plugin 'Maltimore/vim-latex'
 Plugin 'tpope/vim-surround'
