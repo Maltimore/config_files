@@ -11,7 +11,8 @@ sudo apt-get install -y python-dev python-pip python3-dev python3-pip
 # install pip and then the neovim python package for python plugins
 sudo apt-get install -y python3-pip
 pip3 install neovim
-# use Vundle to install all plugins
+# use Vundle to install all plugins, but first install cmake
+sudo apt-get install -y build-essential cmake
 nvim +PluginInstall +qall
 # install compiled content from youcompleteme plugin
 cd ~/.vim/bundle/YouCompleteMe
