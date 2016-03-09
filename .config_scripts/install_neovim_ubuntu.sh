@@ -1,18 +1,8 @@
 #!/bin/bash
 
-cd ~
-git init
-git remote add origin https://github.com/Maltimore/config_files.git
-rm .bashrc
-git pull origin master
-
 # install vundle by just cloning it into the .vim/bundle directory
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 # remember to run :PluginInstall in vim to have vundle install the plugins
-
-# download and install miniconda3
-wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh 
-bash Miniconda3-latest-Linux-x86-64.sh
 
 # install neovim (only works on Ubuntu; no Debian packages yet)
 sudo apt-get install software-properties-common
@@ -25,6 +15,3 @@ sudo apt-get install tmux
 mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
 ln -s ~/.vim $XDG_CONFIG_HOME/nvim
 ln -s ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
-
-# install tmux
-sudo apt-get install tmux

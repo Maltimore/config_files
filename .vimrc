@@ -25,7 +25,9 @@ endif
 " remap sl so that i can use it for the command to switch buffers
 :nmap sl <C-w>
 " only works in neovim, set 'jk' to exit terminal mode
+if has('nvim')
 :tnoremap jk <C-\><C-n>
+endif
 
 
 " COMMANDS
@@ -43,9 +45,8 @@ Plugin 'Maltimore/conque'
 Plugin 'Maltimore/python-mode'
 Plugin 'Maltimore/vim-latex'
 Plugin 'tpope/vim-surround'
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-" end of VUNDLE
+Plugin 'Valloric/YouCompleteMe'
+call vundle#end()
 
 
 " CONQUETERM
@@ -84,4 +85,8 @@ let g:Tex_IgnoreLevel = 8
 
 
 " specifically for neovim:
-let
+if has('nvim')
+	let g:python_host_prog = '/usr/bin/python'
+	let g:python3_host_prog = '/usr/bin/python3'
+	let g:loaded_python_provider = 1
+endif
