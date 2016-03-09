@@ -13,6 +13,9 @@ sudo apt-get install -y python3-pip
 pip3 install neovim
 # use Vundle to install all plugins
 vim +PluginInstall +qall
+# install compiled content from youcompleteme plugin
+cd ~/.vim/bundle/YouCompleteMe
+./install.py
 # use .vimrc as configuration
 mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
 ln -s ~/.vim $XDG_CONFIG_HOME/nvim
