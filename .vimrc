@@ -46,6 +46,7 @@ Plugin 'Maltimore/python-mode'
 Plugin 'Maltimore/vim-latex'
 Plugin 'tpope/vim-surround'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'rking/ag.vim'
 call vundle#end()
 
 
@@ -90,3 +91,13 @@ if has('nvim')
 	let g:python3_host_prog = '/usr/bin/python3'
 	let g:loaded_python_provider = 1
 endif
+
+" for ag.vim plugin
+if executable('ag')
+    " Note we extract the column as well as the file and line number
+    set grepprg=ag\ --nogroup\ --nocolor\ --column
+    set grepformat=%f:%l:%c%m
+	nmap <silent> <RIGHT> :cnext<CR>
+	nmap <silent> <LEFT> :cprev<CR>
+endif
+
