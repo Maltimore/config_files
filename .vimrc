@@ -34,9 +34,6 @@ if has('nvim')
 endif
 
 
-" COMMANDS
-:command Bash ConqueTerm bash
-:command Ipython ConqueTerm ipython
 
 
 " VUNDLE
@@ -51,6 +48,8 @@ Plugin 'Maltimore/vim-latex'
 Plugin 'tpope/vim-surround'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rking/ag.vim'
+Plugin 'bfredl/nvim-ipy'
+"Plugin 'ivanov/vim-ipython'
 call vundle#end()
 
 
@@ -64,7 +63,6 @@ let g:pymode_folding = 1
 let g:pymode_indent = 1
 let g:pymode_run = 1
 let g:pymode_run_bind = '<leader>r'
-let g:pymode_rope_completion = 1
 
 " VIM-LATEX
 " REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
@@ -88,11 +86,16 @@ let g:Tex_IgnoredWarnings =
 let g:Tex_IgnoreLevel = 8
 
 
+" IPython plugin
+let g:nvim_ipy_perform_mappings = 0
+map <silent> rr   <Plug>(IPy-Run)
+
+
 
 " specifically for neovim:
 if has('nvim')
 	let g:python_host_prog = '/usr/bin/python'
-	let g:python3_host_prog = '/usr/bin/python3'
+	let g:python3_host_prog = '/home/maltimore/miniconda3/bin/python3'
 	let g:loaded_python_provider = 1
 endif
 
