@@ -26,7 +26,11 @@ endif
 :nmap sl <C-w>
 " only works in neovim, set 'jk' to exit terminal mode
 if has('nvim')
-:tnoremap jk <C-\><C-n>
+	:tnoremap jk <C-\><C-n>
+	" the following crazy mapping takes the visual selection in python,
+	" goes to the lowest buffer (where I have ipython open) and executes
+	" it, then goes back go the buffer with the python code
+	:vmap rr ysljsljsljpi<Enter>jkslkslkslk
 endif
 
 
