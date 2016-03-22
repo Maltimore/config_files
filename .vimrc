@@ -24,6 +24,12 @@ endif
 :nmap [ <C-[>lxh
 " remap sl so that i can use it for the command to switch buffers
 :nmap sl <C-w>
+" map aa so that it yanks the entire buffer
+:nmap aa <esc>ggVGy<c-o><c-o>
+" make it easier to comment lines in python
+:vmap  # :s#^#\##<cr>:noh<cr>
+:vmap -# :s#^\###<cr>:noh<cr>
+
 " only works in neovim, set 'jk' to exit terminal mode
 if has('nvim')
 	:tnoremap jk <C-\><C-n>
@@ -88,9 +94,12 @@ let g:Tex_IgnoreLevel = 8
 
 " IPython plugin
 let g:nvim_ipy_perform_mappings = 0
-map <silent> rr   <Plug>(IPy-Run)
-
-
+map <silent> rr <Plug>(IPy-Run)
+map <silent> ii <Plug>(IPy-Interrupt)
+" run entire buffer with Ipython plugin
+map <silent> ra <esc>ggVGrr<c-o><c-o>
+" terminate kernel
+map <silent> <c-k> <Plug>(IPy-Terminate)
 
 " specifically for neovim:
 if has('nvim')
@@ -98,7 +107,6 @@ if has('nvim')
 	let g:python3_host_prog = '/home/maltimore/miniconda3/bin/python3'
 	let g:loaded_python_provider = 1
 endif
-
 " for ag.vim plugin
 if executable('ag')
     " Note we extract the column as well as the file and line number
