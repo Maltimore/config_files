@@ -52,11 +52,15 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Maltimore/python-mode'
 Plugin 'Maltimore/vim-latex'
 Plugin 'tpope/vim-surround'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'rking/ag.vim'
 Plugin 'bfredl/nvim-ipy'
-"Plugin 'ivanov/vim-ipython'
+" Plugin 'davidhalter/jedi-vim'
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'vim-airline/vim-airline'
 call vundle#end()
+
+:let g:deoplete#enable_at_startup = 1
 
 
 " CONQUETERM
@@ -97,7 +101,7 @@ let g:nvim_ipy_perform_mappings = 0
 map <silent> rr <Plug>(IPy-Run)
 map <silent> ii <Plug>(IPy-Interrupt)
 " run entire buffer with Ipython plugin
-map <silent> ra <esc>ggVGrr<c-o><c-o>
+map <silent> ra <esc>ggVGrr<c-o>
 " terminate kernel
 map <silent> <c-k> <Plug>(IPy-Terminate)
 
@@ -116,3 +120,8 @@ if executable('ag')
 	nmap <silent> <LEFT> :cprev<CR>
 endif
 
+
+"deoplete
+inoremap <silent><expr> <Tab>
+\ pumvisible() ? "\<C-n>" :
+\ deoplete#mappings#manual_complete()
