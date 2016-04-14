@@ -14,3 +14,10 @@ bash Miniconda3-latest-Linux-x86-64.sh
 
 # install tmux
 sudo apt-get install tmux
+
+
+# how to change the ipython color profile
+# run "ipython profile create"
+# cd ~/.ipython/profile_default
+# in the file "ipython_config.py", search for color
+# and change for example to LightBG
