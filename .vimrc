@@ -71,6 +71,7 @@ let g:pymode_folding = 1
 let g:pymode_indent = 1
 let g:pymode_run = 1
 let g:pymode_run_bind = '<leader>r'
+let g:pymode_lint = 0
 
 " VIM-LATEX
 " REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
