@@ -7,12 +7,13 @@ filetype off
 filetype plugin indent on
 syntax on
 
-" Uncomment the following to have Vim jump to the last position when
-" reopening a file
+" Jump to the last cursor position when reopening a file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal! g'\"" | endif
 endif
+" Let the explore mode (file tree) be in NERDTree style
+let g:netrw_liststyle=3 
 
 " REMAPPING
 " remap o so that it doesn't go to insert mode
@@ -22,8 +23,6 @@ endif
 :imap jk <C-[>
 " remap sl so that i can use it for the command to switch buffers
 :nmap sl <C-w>
-" map aa so that it yanks the entire buffer
-":nmap aa <esc>ggVGy<c-o><c-o>
 " make it easier to comment lines in python
 :vmap  # :s#^#\##<cr>:noh<cr>
 :vmap -# :s#^\###<cr>:noh<cr>
@@ -31,10 +30,6 @@ endif
 " only works in neovim, set 'jk' to exit terminal mode
 if has('nvim')
 	:tnoremap jk <C-\><C-n>
-	" the following crazy mapping takes the visual selection in python,
-	" goes to the lowest buffer (where I have ipython open) and executes
-	" it, then goes back go the buffer with the python code
-	":vmap rr ysljsljsljpi<Enter>jkslkslkslk
 endif
 
 
@@ -46,19 +41,19 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-" Plugin 'Maltimore/conque'
 Plugin 'Maltimore/python-mode'
 Plugin 'Maltimore/vim-latex'
 Plugin 'tpope/vim-surround'
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'rking/ag.vim'
 Plugin 'bfredl/nvim-ipy'
-" Plugin 'davidhalter/jedi-vim'
+Plugin 'davidhalter/jedi-vim'
 " Plugin 'Shougo/deoplete.nvim'
+" Plugin 'zchee/deoplete-jedi'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-scripts/IndexedSearch'
 call vundle#end()
 
-:let g:deoplete#enable_at_startup = 1
 
 
 " CONQUETERM
@@ -107,7 +102,7 @@ map <silent> <c-k> <Plug>(IPy-Terminate)
 " specifically for neovim:
 if has('nvim')
 	let g:python_host_prog = '/usr/bin/python'
-	let g:python3_host_prog = '/home/maltimore/miniconda3/bin/python3'
+	let g:python3_host_prog = '/home/maltimore/miniconda3/envs/py35/bin/python'
 	let g:loaded_python_provider = 1
 endif
 " for ag.vim plugin
@@ -121,6 +116,7 @@ endif
 
 
 "deoplete
-" inoremap <silent><expr> <Tab>
+:let g:deoplete#enable_at_startup = 1
+inoremap <silent><expr> <Tab>
 \ pumvisible() ? "\<C-n>" :
 \ deoplete#mappings#manual_complete()
