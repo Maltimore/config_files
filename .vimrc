@@ -27,10 +27,6 @@ let g:netrw_liststyle=3
 :vmap  # :s#^#\##<cr>:noh<cr>
 :vmap -# :s#^\###<cr>:noh<cr>
 
-" only works in neovim, set 'jk' to exit terminal mode
-if has('nvim')
-	:tnoremap jk <C-\><C-n>
-endif
 
 
 
@@ -54,12 +50,6 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-scripts/IndexedSearch'
 call vundle#end()
 
-
-
-" CONQUETERM
-let g:ConqueTerm_SendVisKey = '<Space>'
-
-
 " PYMODE
 let g:pymode_rope = 0
 let g:pymode_folding = 1
@@ -82,8 +72,6 @@ let g:tex_flavor='latex'
 
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_MultipleCompileFormats='pdf, bib,pdf'
-" let g:Tex_MultipleCompileFormats='pdf, aux'
-
 " let latex suite ignore warnings from the tex compiler
 let g:Tex_IgnoredWarnings = 
 	\'Font Warning'."\n"
@@ -93,7 +81,6 @@ let g:Tex_IgnoreLevel = 8
 " IPython plugin
 let g:nvim_ipy_perform_mappings = 0
 map <silent> rr <Plug>(IPy-Run)
-map <silent> ni <Plug>(IPy-Interrupt)
 " run entire buffer with Ipython plugin
 map <silent> ra <esc>ggVGrr<c-o>
 " terminate kernel
@@ -101,10 +88,13 @@ map <silent> <c-k> <Plug>(IPy-Terminate)
 
 " specifically for neovim:
 if has('nvim')
+	" go to normal mode with jk while in terminal
+	:tnoremap jk <C-\><C-n>
 	let g:python_host_prog = '/usr/bin/python'
 	let g:python3_host_prog = '/home/maltimore/miniconda3/envs/py35/bin/python'
 	let g:loaded_python_provider = 1
 endif
+
 " for ag.vim plugin
 if executable('ag')
     " Note we extract the column as well as the file and line number
@@ -115,7 +105,7 @@ if executable('ag')
 endif
 
 
-"deoplete
+" deoplete plugin
 :let g:deoplete#enable_at_startup = 1
 inoremap <silent><expr> <Tab>
 \ pumvisible() ? "\<C-n>" :
