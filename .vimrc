@@ -6,6 +6,15 @@
 filetype off
 filetype plugin indent on
 syntax on
+" when opening a new file and typing the filename, this will give
+" more bashlike behavior on hitting <tab>
+set wildmode=longest,list,full
+set wildmenu
+" reload the .vimrc after saving changes to it
+augroup myvimrc
+    au!
+    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+augroup END
 
 " Jump to the last cursor position when reopening a file
 if has("autocmd")
@@ -26,6 +35,8 @@ let g:netrw_liststyle=3
 " make it easier to comment lines in python
 :vmap  # :s#^#\##<cr>:noh<cr>
 :vmap -# :s#^\###<cr>:noh<cr>
+" make opening the .vimrc easier
+nnoremap <leader>ev :split $MYVIMRC<CR>
 
 
 
@@ -48,6 +59,7 @@ Plugin 'davidhalter/jedi-vim'
 " Plugin 'zchee/deoplete-jedi'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-scripts/IndexedSearch'
+Plugin 'gcmt/taboo.vim'
 call vundle#end()
 
 " PYMODE
