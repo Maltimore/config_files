@@ -15,7 +15,6 @@ augroup myvimrc
     au!
     au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
 augroup END
-
 " Jump to the last cursor position when reopening a file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
@@ -38,10 +37,6 @@ let g:netrw_liststyle=3
 " make opening the .vimrc easier
 nnoremap <leader>ev :split $MYVIMRC<CR>
 
-
-
-
-
 " VUNDLE
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -60,6 +55,9 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-scripts/IndexedSearch'
 Plugin 'gcmt/taboo.vim'
+Plugin 'fs111/pydoc.vim'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-session'
 call vundle#end()
 
 " PYMODE
@@ -89,8 +87,7 @@ let g:Tex_IgnoredWarnings =
 	\'Font Warning'."\n"
 let g:Tex_IgnoreLevel = 8
 
-
-" IPython plugin
+" IPYTHON
 let g:nvim_ipy_perform_mappings = 0
 map <silent> rr <Plug>(IPy-Run)
 " run entire buffer with Ipython plugin
@@ -98,6 +95,7 @@ map <silent> ra <esc>ggVGrr<c-o>
 " terminate kernel
 map <silent> <c-k> <Plug>(IPy-Terminate)
 
+" NEOVIM
 " specifically for neovim:
 if has('nvim')
 	" go to normal mode with jk while in terminal
@@ -107,7 +105,7 @@ if has('nvim')
 	let g:loaded_python_provider = 1
 endif
 
-" for ag.vim plugin
+" AG.VIM
 if executable('ag')
     " Note we extract the column as well as the file and line number
     set grepprg=ag\ --nogroup\ --nocolor\ --column
@@ -116,9 +114,11 @@ if executable('ag')
 	nmap <silent> <LEFT> :cprev<CR>
 endif
 
-
-" deoplete plugin
+" DEOPLETE
 :let g:deoplete#enable_at_startup = 1
 inoremap <silent><expr> <Tab>
 \ pumvisible() ? "\<C-n>" :
 \ deoplete#mappings#manual_complete()
+
+" PYDOC
+:nmap <leader>do <leader>pw
