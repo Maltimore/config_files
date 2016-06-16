@@ -50,8 +50,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'rking/ag.vim'
 Plugin 'bfredl/nvim-ipy'
 " Plugin 'davidhalter/jedi-vim'
-Plugin 'Shougo/deoplete.nvim'
-Plugin 'zchee/deoplete-jedi'
+"Plugin 'Shougo/deoplete.nvim'
+"Plugin 'zchee/deoplete-jedi'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-scripts/IndexedSearch'
 Plugin 'gcmt/taboo.vim'
@@ -101,7 +101,8 @@ if has('nvim')
 	" go to normal mode with jk while in terminal
 	:tnoremap jk <C-\><C-n>
 	let g:python_host_prog = '/usr/bin/python'
-	let g:python3_host_prog = '/home/maltimore/miniconda3/envs/py35/bin/python'
+	let g:python3_host_prog = '/home/maltimore/miniconda3/bin/python'
+"	let g:python3_host_prog = '/home/maltimore/miniconda3/envs/py35/bin/python'
 	let g:loaded_python_provider = 1
 endif
 
