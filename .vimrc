@@ -123,3 +123,6 @@ inoremap <silent><expr> <Tab>
 
 " PYDOC
 :nmap <leader>do <leader>pw
+
+" VIM-SESSION
+:let g:session_autoload = "no"
