@@ -22,6 +22,8 @@ if has("autocmd")
 endif
 " Let the explore mode (file tree) be in NERDTree style
 let g:netrw_liststyle=3 
+" let the vim-session plugin not ask to save every session
+:let g:session_autosave = 'no'
 
 " REMAPPING
 " remap o so that it doesn't go to insert mode
