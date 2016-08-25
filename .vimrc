@@ -45,8 +45,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'Maltimore/python-mode'
-Plugin 'Maltimore/vim-latex'
+" Plugin 'Maltimore/python-mode'
+Plugin 'vim-latex/vim-latex'
 Plugin 'tpope/vim-surround'
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'rking/ag.vim'
@@ -91,9 +91,9 @@ let g:Tex_IgnoreLevel = 8
 
 " IPYTHON
 let g:nvim_ipy_perform_mappings = 0
-map <silent> rr <Plug>(IPy-Run)
+#map <silent> rr <Plug>(IPy-Run)
 " run entire buffer with Ipython plugin
-map <silent> ra <esc>ggVGrr<c-o>
+#map <silent> ra <esc>ggVGrr<c-o>
 " terminate kernel
 map <silent> <c-k> <Plug>(IPy-Terminate)
 
