@@ -46,8 +46,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Maltimore/python-mode'
 Plugin 'Maltimore/vim-latex'
 Plugin 'tpope/vim-surround'
-"Plugin 'Valloric/YouCompleteMe'
-Plugin 'rking/ag.vim'
 Plugin 'bfredl/nvim-ipy'
 " Plugin 'davidhalter/jedi-vim'
 "Plugin 'Shougo/deoplete.nvim'
@@ -58,6 +56,7 @@ Plugin 'gcmt/taboo.vim'
 Plugin 'fs111/pydoc.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
+Plugin 'mileszs/ack.vim'
 call vundle#end()
 
 " PYMODE

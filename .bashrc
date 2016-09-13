@@ -115,4 +115,6 @@ fi
 
 export PATH="$HOME/miniconda3/bin:$PATH"
 #source activate py2
-source activate tf
+source activate thpy2 
+
+eval $(thefuck --alias)

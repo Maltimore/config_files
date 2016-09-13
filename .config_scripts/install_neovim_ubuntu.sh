@@ -2,9 +2,9 @@
 
 # install vundle by just cloning it into the .vim/bundle directory
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-# install the silver searcher program so that the Ag plugin works
+# install the Ack searching program
 # (which is for searching for text in multiple files)
-sudo apt-get install -y silversearcher-ag
+sudo apt-get install -y ack-grep
 # install the xsel program to be able to copy to system clipboard with "+y
 sudo apt-get install -y xsel
 # install neovim (only works on Ubuntu; no Debian packages yet)
