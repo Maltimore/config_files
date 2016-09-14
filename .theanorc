@@ -1,9 +1,9 @@
 [global]
-device=cpu
+device=gpu
 floatX=float32
 
 [nvcc]
 flags=-D_FORCE_INLINES
 
 [lib]
-cnmem=.9
+cnmem=.99

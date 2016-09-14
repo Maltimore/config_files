@@ -1,6 +1,7 @@
 " OPTIONS
 " set tabstop width etc.
-:set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
+:set tabstop=4 softtabstop=4 shiftwidth=4 
+:set expandtab
 " show line numbering
 :set number
 filetype off
@@ -116,10 +117,10 @@ if executable('ag')
 endif
 
 " DEOPLETE
-:let g:deoplete#enable_at_startup = 1
-inoremap <silent><expr> <Tab>
-\ pumvisible() ? "\<C-n>" :
-\ deoplete#mappings#manual_complete()
+":let g:deoplete#enable_at_startup = 1
+"inoremap <silent><expr> <Tab>
+"\ pumvisible() ? "\<C-n>" :
+"\ deoplete#mappings#manual_complete()
 
 " PYDOC
 :nmap <leader>do <leader>pw

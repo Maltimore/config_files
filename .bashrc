@@ -114,9 +114,13 @@ if ! shopt -oq posix; then
 fi
 
 export PATH="$HOME/miniconda3/bin:$PATH"
-source activate py2
+source activate py23
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-7.5/lib64:
 export LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-7.5/lib64:
 export PATH=$PATH:/usr/local/cuda-7.5/bin
-#source activate tf
+
+source new-modules.sh
+module load gcc/4.8.2-fasrc01
+module load cuda/7.5-fasrc01
+module load cudnn/7.0-fasrc01
