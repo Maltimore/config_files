@@ -114,8 +114,11 @@ if ! shopt -oq posix; then
 fi
 
 export PATH="$HOME/miniconda3/bin:$PATH"
-source activate py2
+source activate thpy2
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-7.5/lib64:
 export LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-7.5/lib64:
 export PATH=$PATH:/usr/local/cuda-7.5/bin
+
+# alias
+alias "ipython"="ipython -ic 'import numpy as np; import matplotlib.pyplot as plt'"
