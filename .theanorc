@@ -1,9 +1,14 @@
 [global]
 device=gpu
-floatX=float32
+floatX=float16
+warn_float64=warn
 
 [nvcc]
 flags=-D_FORCE_INLINES
 
-[lib]
-cnmem=.99
+#[lib]
+#cnmem=.95
+
+
+[dnn]
+conv.algo_fwd="winograd"
