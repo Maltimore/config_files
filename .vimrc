@@ -59,6 +59,7 @@ Plugin 'fs111/pydoc.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'mileszs/ack.vim'
+Plugin 'JamshedVesuna/vim-markdown-preview'
 call vundle#end()
 
 " PYMODE
@@ -127,3 +128,7 @@ inoremap <silent><expr> <Tab>
 
 " VIM-SESSION
 :let g:session_autoload = "no"
+
+" Markdown previewer
+" note: hotkey for viewing is <c-p>
+let vim_markdown_preview_github=1

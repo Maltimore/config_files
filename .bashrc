@@ -118,3 +118,6 @@ export PATH="$HOME/miniconda3/bin:$PATH"
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-7.5/lib64:
 export LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-7.5/lib64:
 export PATH=$PATH:/usr/local/cuda-7.5/bin
+
+export PYTHONPATH="${PYTHONPATH}:$HOME/toolkit/hams_aws_methods"
+
