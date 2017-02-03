@@ -118,10 +118,10 @@ if executable('ag')
 endif
 
 " DEOPLETE
-:let g:deoplete#enable_at_startup = 1
-inoremap <silent><expr> <Tab>
-\ pumvisible() ? "\<C-n>" :
-\ deoplete#mappings#manual_complete()
+" :let g:deoplete#enable_at_startup = 1
+" inoremap <silent><expr> <Tab>
+" \ pumvisible() ? "\<C-n>" :
+" \ deoplete#mappings#manual_complete()
 
 " PYDOC
 :nmap <leader>do <leader>pw
