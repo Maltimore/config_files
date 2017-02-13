@@ -61,6 +61,7 @@ Plugin 'fs111/pydoc.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'mileszs/ack.vim'
+Plugin 'JamshedVesuna/vim-markdown-preview'
 call vundle#end()
 
 " PYMODE
@@ -119,13 +120,17 @@ if executable('ag')
 endif
 
 " DEOPLETE
-:let g:deoplete#enable_at_startup = 1
-inoremap <silent><expr> <Tab>
-\ pumvisible() ? "\<C-n>" :
-\ deoplete#mappings#manual_complete()
+" :let g:deoplete#enable_at_startup = 1
+" inoremap <silent><expr> <Tab>
+" \ pumvisible() ? "\<C-n>" :
+" \ deoplete#mappings#manual_complete()
 
 " PYDOC
 :nmap <leader>do <leader>pw
 
 " VIM-SESSION
 :let g:session_autoload = "no"
+
+" Markdown previewer
+" note: hotkey for viewing is <c-p>
+let vim_markdown_preview_github=1
