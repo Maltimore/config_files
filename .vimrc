@@ -24,6 +24,8 @@ endif
 let g:netrw_liststyle=3 
 " let the vim-session plugin not ask to save every session
 :let g:session_autosave = 'no'
+" mouse interoperability
+set mouse=a
 
 " REMAPPING
 " remap o so that it doesn't go to insert mode
