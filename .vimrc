@@ -38,6 +38,8 @@ let g:netrw_liststyle=3
 :vmap -# :s#^\###<cr>:noh<cr>
 " make opening the .vimrc easier
 nnoremap <leader>ev :split $MYVIMRC<CR>
+" setting the pastetoggle
+set pastetoggle=<c-p>
 
 " VUNDLE
 " set the runtime path to include Vundle and initialize
@@ -45,13 +47,13 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-" Plugin 'Maltimore/python-mode'
+"Plugin 'python-mode/python-mode'
 Plugin 'vim-latex/vim-latex'
 Plugin 'tpope/vim-surround'
 Plugin 'bfredl/nvim-ipy'
-" Plugin 'davidhalter/jedi-vim'
-"Plugin 'Shougo/deoplete.nvim'
-"Plugin 'zchee/deoplete-jedi'
+"Plugin 'davidhalter/jedi-vim'
+" Plugin 'Shougo/deoplete.nvim'
+" Plugin 'zchee/deoplete-jedi'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-scripts/IndexedSearch'
 Plugin 'gcmt/taboo.vim'
@@ -90,7 +92,7 @@ let g:Tex_IgnoreLevel = 8
 
 " IPYTHON
 let g:nvim_ipy_perform_mappings = 0
-"map <silent> rr <Plug>(IPy-Run)
+map <silent> <c-h> <Plug>(IPy-Run)
 " run entire buffer with Ipython plugin
 "map <silent> ra <esc>ggVGrr<c-o>
 " terminate kernel
