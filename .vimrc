@@ -63,6 +63,7 @@ Plugin 'xolox/vim-session'
 Plugin 'mileszs/ack.vim'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'lifepillar/vim-solarized8'
+Plugin 'frankier/neovim-colors-solarized-truecolor-only'
 call vundle#end()
 
 " PYMODE
@@ -127,4 +128,7 @@ endif
 " note: hotkey for viewing is <c-p>
 let vim_markdown_preview_github=1
 
-
+" neovim-colors-solarized-truecolor-only plugin
+set termguicolors
+set background=dark " or dark
+colorscheme solarized
