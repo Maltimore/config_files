@@ -130,5 +130,5 @@ let vim_markdown_preview_github=1
 
 " neovim-colors-solarized-truecolor-only plugin
 set termguicolors
-set background=dark " or dark
+set background=light " or dark
 colorscheme solarized
