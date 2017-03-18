@@ -1,7 +1,6 @@
 " OPTIONS
 " set tabstop width etc.
-:set tabstop=4 softtabstop=4 shiftwidth=4 
-:set expandtab
+:set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 " show line numbering
 :set number
 filetype off
@@ -23,8 +22,8 @@ if has("autocmd")
 endif
 " Let the explore mode (file tree) be in NERDTree style
 let g:netrw_liststyle=3 
-" let the vim-session plugin not ask to save every session
-:let g:session_autosave = 'no'
+" mouse interoperability
+set mouse=a
 
 " REMAPPING
 " remap o so that it doesn't go to insert mode
@@ -38,7 +37,9 @@ let g:netrw_liststyle=3
 :vmap  # :s#^#\##<cr>:noh<cr>
 :vmap -# :s#^\###<cr>:noh<cr>
 " make opening the .vimrc easier
-nnoremap <leader>ev :split $MYVIMRC<CR>
+nnoremap <leader>ev :e $MYVIMRC<CR>
+" setting the pastetoggle
+set pastetoggle=<c-p>
 
 " VUNDLE
 " set the runtime path to include Vundle and initialize
@@ -46,13 +47,13 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-" Plugin 'Maltimore/python-mode'
+"Plugin 'python-mode/python-mode'
 Plugin 'vim-latex/vim-latex'
 Plugin 'tpope/vim-surround'
 Plugin 'bfredl/nvim-ipy'
-" Plugin 'davidhalter/jedi-vim'
-"Plugin 'Shougo/deoplete.nvim'
-"Plugin 'zchee/deoplete-jedi'
+"Plugin 'davidhalter/jedi-vim'
+" Plugin 'Shougo/deoplete.nvim'
+" Plugin 'zchee/deoplete-jedi'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-scripts/IndexedSearch'
 Plugin 'gcmt/taboo.vim'
@@ -60,6 +61,9 @@ Plugin 'fs111/pydoc.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'mileszs/ack.vim'
+Plugin 'JamshedVesuna/vim-markdown-preview'
+Plugin 'lifepillar/vim-solarized8'
+Plugin 'frankier/neovim-colors-solarized-truecolor-only'
 call vundle#end()
 
 " PYMODE
@@ -91,7 +95,7 @@ let g:Tex_IgnoreLevel = 8
 
 " IPYTHON
 let g:nvim_ipy_perform_mappings = 0
-"map <silent> rr <Plug>(IPy-Run)
+map <silent> <c-h> <Plug>(IPy-Run)
 " run entire buffer with Ipython plugin
 "map <silent> ra <esc>ggVGrr<c-o>
 " terminate kernel
@@ -108,23 +112,23 @@ if has('nvim')
 	let g:loaded_python_provider = 1
 endif
 
-" AG.VIM
-if executable('ag')
-    " Note we extract the column as well as the file and line number
-    set grepprg=ag\ --nogroup\ --nocolor\ --column
-    set grepformat=%f:%l:%c%m
-	nmap <silent> <RIGHT> :cnext<CR>
-	nmap <silent> <LEFT> :cprev<CR>
-endif
 
 " DEOPLETE
-":let g:deoplete#enable_at_startup = 1
-"inoremap <silent><expr> <Tab>
-"\ pumvisible() ? "\<C-n>" :
-"\ deoplete#mappings#manual_complete()
-
-" PYDOC
-:nmap <leader>do <leader>pw
+" :let g:deoplete#enable_at_startup = 1
+" inoremap <silent><expr> <Tab>
+" \ pumvisible() ? "\<C-n>" :
+" \ deoplete#mappings#manual_complete()
 
 " VIM-SESSION
+" let the vim-session plugin not ask to save/load every session
 :let g:session_autoload = "no"
+:let g:session_autosave = 'no'
+
+" Markdown previewer
+" note: hotkey for viewing is <c-p>
+let vim_markdown_preview_github=1
+
+" neovim-colors-solarized-truecolor-only plugin
+set termguicolors
+set background=light " or dark
+colorscheme solarized

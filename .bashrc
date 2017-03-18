@@ -114,13 +114,27 @@ if ! shopt -oq posix; then
 fi
 
 export PATH="$HOME/miniconda3/bin:$PATH"
-source activate py23
+source activate py36
 
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-7.5/lib64:
-export LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-7.5/lib64:
-export PATH=$PATH:/usr/local/cuda-7.5/bin
+#export LD_LIBRARY_PATH=$HOME/my_libc_env/lib/x86_64-linux-gnu/:$HOME/my_libc_env/usr/lib64/:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/n/coxfs01/maltimore/cudnn/cuda/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/n/coxfs01/maltimore/cuda/cuda_8_0/lib64:$LD_LIBRARY_PATH
+#export LD_LIBRARY_PATH=/n/coxfs01/maltimore/cuda/cuda_7_5/lib64:$LD_LIBRARY_PATH
+#export LD_LIBRARY_PATH=/usr/local/cuda-7.5/lib64:$LD_LIBRARY_PATH
+export CUDA_HOME=/n/coxfs01/maltimore/cuda/cuda_8_0
+#export CUDA_HOME=/n/coxfs01/maltimore/cuda/cuda_7_5
+export CPATH=/n/coxfs01/maltimore/cudnn/cuda/include:$CPATH
+#export CPATH=/n/coxfs01/maltimore/cuda/cuda_7_5/include:$CPATH
+export CPATH=/n/coxfs01/maltimore/cuda/cuda_8_0/include:$CPATH
+export LIBRARY_PATH=$LD_LIBRARY_PATH
+export PATH=$PATH:/n/coxfs01/maltimore/cuda/cuda_8_0/bin
+#export PATH=$PATH:/n/coxfs01/maltimore/cuda/cuda_7_5/bin
 
 source new-modules.sh
-module load gcc/4.8.2-fasrc01
-module load cuda/7.5-fasrc01
-module load cudnn/7.0-fasrc01
+module load gcc/5.3.0-fasrc01
+#module load cuda/7.5-fasrc01
+#module load cudnn/7.0-fasrc01
+module load boost/1.59.0-fasrc01
+module load cmake/3.5.2-fasrc01
+module load neovim/0.1.5-fasrc01
+module load git/2.1.0-fasrc01

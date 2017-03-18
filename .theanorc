@@ -1,14 +1,17 @@
 [global]
-device=gpu
-floatX=float16
-warn_float64=warn
+device=gpu0
+force_device=True
+floatX=float32
+#warn_float64=warn
 
 [nvcc]
-flags=-D_FORCE_INLINES
+flags=-D_FORCE_INLINES -I/n/coxfs01/maltimore/cudnn/cuda/cuda_8_0 -L/n/coxfs01/maltimore/cudnn/cuda/cuda_8_0 -lcudnn
+optimizer_including=cudnn
 
 #[lib]
 #cnmem=.95
 
 
 [dnn]
-conv.algo_fwd="winograd"
+#conv.algo_fwd="small"
+#conv.algo_bwd="small"
