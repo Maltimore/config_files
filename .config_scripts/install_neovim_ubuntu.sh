@@ -18,6 +18,8 @@ sudo apt-get install -y python-dev python-pip python3-dev python3-pip
 pip3 install neovim
 # install grip for markdown-viewer
 pip install grip
+# install flake8 for syntastic
+pip install flake8
 # use Vundle to install all plugins, but first install cmake
 sudo apt-get install -y build-essential cmake
 # use .vimrc as configuration
