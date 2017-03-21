@@ -62,6 +62,7 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'mileszs/ack.vim'
 Plugin 'JamshedVesuna/vim-markdown-preview'
+Plugin 'vim-syntastic/syntastic'
 Plugin 'lifepillar/vim-solarized8'
 Plugin 'frankier/neovim-colors-solarized-truecolor-only'
 call vundle#end()
@@ -132,3 +133,11 @@ let vim_markdown_preview_github=1
 set termguicolors
 set background=light " or dark
 colorscheme solarized
+
+" SYNTASTIC
+" On by default
+let g:syntastic_mode_map = { 'mode': 'active',
+    \ 'active_filetypes': [],
+    \ 'passive_filetypes': [] }
+" Use flake8
+let g:syntastic_python_checkers = ['flake8']
