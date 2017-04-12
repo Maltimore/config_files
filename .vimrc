@@ -112,6 +112,9 @@ if has('nvim')
 	let g:python3_host_prog = '/home/maltimore/miniconda3/bin/python'
 "	let g:python3_host_prog = '/home/maltimore/miniconda3/envs/py35/bin/python'
 	let g:loaded_python_provider = 1
+
+    " use neovims inccommand to highlight replacings
+	set inccommand=nosplit
 endif
 
 
