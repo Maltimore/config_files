@@ -65,6 +65,7 @@ Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'lifepillar/vim-solarized8'
 Plugin 'frankier/neovim-colors-solarized-truecolor-only'
+Plugin 'kien/ctrlp.vim'
 call vundle#end()
 
 " PYMODE
