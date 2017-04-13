@@ -13,7 +13,7 @@ git config --global user.email "malte.esders@gmail.com"
 
 # download and install miniconda3
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh 
-bash Miniconda3-latest-Linux-x86-64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
 
 
 # how to change the ipython color profile
