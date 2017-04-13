@@ -62,8 +62,10 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'mileszs/ack.vim'
 Plugin 'JamshedVesuna/vim-markdown-preview'
+Plugin 'vim-syntastic/syntastic'
 Plugin 'lifepillar/vim-solarized8'
 Plugin 'frankier/neovim-colors-solarized-truecolor-only'
+Plugin 'kien/ctrlp.vim'
 call vundle#end()
 
 " PYMODE
@@ -110,6 +112,9 @@ if has('nvim')
 	let g:python3_host_prog = '/home/maltimore/miniconda3/bin/python'
 "	let g:python3_host_prog = '/home/maltimore/miniconda3/envs/py35/bin/python'
 	let g:loaded_python_provider = 1
+
+    " use neovims inccommand to highlight replacings
+	set inccommand=nosplit
 endif
 
 
@@ -130,5 +135,14 @@ let vim_markdown_preview_github=1
 
 " neovim-colors-solarized-truecolor-only plugin
 set termguicolors
-set background=dark " or dark
+set background=light " or dark
 colorscheme solarized
+
+" SYNTASTIC
+" On by default
+let g:syntastic_mode_map = { 'mode': 'active',
+    \ 'active_filetypes': [],
+    \ 'passive_filetypes': [] }
+" Use flake8
+let g:syntastic_python_checkers = ['flake8']
+command E Ex
