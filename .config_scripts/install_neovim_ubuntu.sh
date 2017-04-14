@@ -14,8 +14,9 @@ sudo add-apt-repository -y ppa:neovim-ppa/unstable
 sudo apt-get update
 sudo apt-get install -y neovim
 sudo apt-get install -y python-dev python-pip python3-dev python3-pip
+source deactivate
 # install the neovim python package for python plugins
-pip3 install neovim
+pip install neovim
 # install grip for markdown-viewer
 pip install grip
 # install flake8 for syntastic

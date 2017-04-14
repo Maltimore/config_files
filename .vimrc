@@ -110,7 +110,6 @@ if has('nvim')
 	:tnoremap jk <C-\><C-n>
 	let g:python_host_prog = '/usr/bin/python'
 	let g:python3_host_prog = '/home/maltimore/miniconda3/bin/python'
-"	let g:python3_host_prog = '/home/maltimore/miniconda3/envs/py35/bin/python'
 	let g:loaded_python_provider = 1
 
     " use neovims inccommand to highlight replacings
