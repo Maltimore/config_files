@@ -15,6 +15,10 @@ git config --global user.email "malte.esders@gmail.com"
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh 
 bash Miniconda3-latest-Linux-x86_64.sh
 
+# create py36 environment
+source ~/.bashrc
+conda create -n py36 python=3.6
+
 
 # how to change the ipython color profile
 # run "ipython profile create"
