@@ -112,7 +112,7 @@ if has('nvim')
 	let g:loaded_python_provider = 1
 
     " use neovims inccommand to highlight replacings
-	set inccommand=nosplit
+	" set inccommand=nosplit
 endif
 
 
