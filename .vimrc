@@ -24,6 +24,8 @@ endif
 let g:netrw_liststyle=3 
 " mouse interoperability
 set mouse=a
+" auto indent the next line after hitting enter
+"set autoindent
 
 " REMAPPING
 " remap o so that it doesn't go to insert mode
@@ -66,6 +68,8 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'lifepillar/vim-solarized8'
 Plugin 'frankier/neovim-colors-solarized-truecolor-only'
 Plugin 'kien/ctrlp.vim'
+Plugin 'heavenshell/vim-pydocstring'
+Plugin 'junegunn/vim-easy-align'
 call vundle#end()
 
 " PYMODE
@@ -145,3 +149,9 @@ let g:syntastic_mode_map = { 'mode': 'active',
 " Use flake8
 let g:syntastic_python_checkers = ['flake8']
 command E Ex
+
+" VIM-EASY-ALIGN
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
