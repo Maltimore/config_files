@@ -1,5 +1,5 @@
 [global]
-device=gpu0
+device=cpu
 force_device=True
 floatX=float32
 #warn_float64=warn
