@@ -26,6 +26,9 @@ let g:netrw_liststyle=3
 set mouse=a
 " auto indent the next line after hitting enter
 "set autoindent
+" make searching case insensitive when search string is only lowercase
+set ignorecase
+set smartcase
 
 " REMAPPING
 " remap o so that it doesn't go to insert mode
