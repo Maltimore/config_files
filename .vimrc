@@ -116,6 +116,7 @@ if has('nvim')
 	:tnoremap jk <C-\><C-n>
 	let g:python_host_prog = '/usr/bin/python'
 	let g:python3_host_prog = '/home/maltimore/miniconda3/bin/python'
+	" disable python 2 support
 	let g:loaded_python_provider = 1
 
     " use neovims inccommand to highlight replacings
@@ -160,3 +161,8 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+" JEDI-VIM
+let g:jedi#force_py_version = 3
+" jedi vim should not complete at all, I just want the other features
+let g:jedi#completions_enabled = 0
