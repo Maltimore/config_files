@@ -19,9 +19,7 @@ bash Miniconda3-latest-Linux-x86_64.sh
 source ~/.bashrc
 conda create -n py36 python=3.6
 
-
 # how to change the ipython color profile
 # run "ipython profile create"
-# cd ~/.ipython/profile_default
-# in the file "ipython_config.py", search for color
-# and change for example to LightBG
+# edit ~/.ipython/profile_default/ipython_config.py
+# search for "color" and change for example to LightBG
