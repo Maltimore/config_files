@@ -66,7 +66,8 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'mileszs/ack.vim'
 Plugin 'JamshedVesuna/vim-markdown-preview'
-Plugin 'vim-syntastic/syntastic'
+" Plugin 'vim-syntastic/syntastic'
+Plugin 'neomake/neomake'
 Plugin 'lifepillar/vim-solarized8'
 Plugin 'frankier/neovim-colors-solarized-truecolor-only'
 Plugin 'kien/ctrlp.vim'
@@ -146,12 +147,12 @@ colorscheme solarized
 
 " SYNTASTIC
 " On by default
-let g:syntastic_mode_map = { 'mode': 'active',
-    \ 'active_filetypes': [],
-    \ 'passive_filetypes': [] }
+"let g:syntastic_mode_map = { 'mode': 'active',
+"    \ 'active_filetypes': [],
+"    \ 'passive_filetypes': [] }
 " Use flake8
-let g:syntastic_python_checkers = ['flake8']
-command E Ex
+" let g:syntastic_python_checkers = ['flake8']
+" command E Ex
 
 " CtrlP (fuzzy file search)
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
@@ -168,3 +169,16 @@ let g:jedi#force_py_version = 3
 let g:jedi#completions_enabled = 0
 " set the delay in ms until jedi-vim shows call signatures
 let g:jedi#show_call_signatures_delay = 1000
+
+" NEOMAKE
+let g:neomake_python_flake8_maker = {
+    \ 'args': ['--ignore=E126,E266,E265,E402',  '--format=default'],
+    \ 'errorformat':
+        \ '%E%f:%l: could not compile,%-Z%p^,' .
+        \ '%A%f:%l:%c: %t%n %m,' .
+        \ '%A%f:%l: %t%n %m,' .
+        \ '%-G%.%#',
+    \ }
+let g:neomake_python_enabled_makers = ['flake8']
+" run :Neomake every time I save or open a file
+autocmd! BufWritePost,BufEnter * Neomake
