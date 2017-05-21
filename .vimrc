@@ -116,7 +116,7 @@ if has('nvim')
 	" go to normal mode with jk while in terminal
 	:tnoremap jk <C-\><C-n>
 	let g:python_host_prog = '/usr/bin/python'
-	let g:python3_host_prog = '/home/maltimore/miniconda3/bin/python'
+	let g:python3_host_prog = '~/miniconda3/bin/python'
 	" disable python 2 support
 	let g:loaded_python_provider = 1
 
