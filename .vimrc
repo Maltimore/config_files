@@ -172,7 +172,7 @@ let g:jedi#show_call_signatures_delay = 1000
 
 " NEOMAKE
 let g:neomake_python_flake8_maker = {
-    \ 'args': ['--ignore=E126,E266,E265,E402',  '--format=default'],
+    \ 'args': ['--ignore=E126,E266,E265,E402',  '--format=default', '--max-line-length=100'],
     \ 'errorformat':
         \ '%E%f:%l: could not compile,%-Z%p^,' .
         \ '%A%f:%l:%c: %t%n %m,' .
