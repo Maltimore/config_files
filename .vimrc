@@ -76,12 +76,12 @@ Plugin 'junegunn/vim-easy-align'
 call vundle#end()
 
 " PYMODE
-let g:pymode_rope = 0
-let g:pymode_folding = 1
-let g:pymode_indent = 1
-let g:pymode_run = 1
-let g:pymode_run_bind = '<leader>r'
-let g:pymode_lint = 0
+"let g:pymode_rope = 0
+"let g:pymode_folding = 1
+"let g:pymode_indent = 1
+"let g:pymode_run = 1
+"let g:pymode_run_bind = '<leader>r'
+"let g:pymode_lint = 0
 
 " VIM-LATEX
 " REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
@@ -152,7 +152,7 @@ colorscheme solarized
 "    \ 'passive_filetypes': [] }
 " Use flake8
 " let g:syntastic_python_checkers = ['flake8']
-" command E Ex
+command E Ex
 
 " CtrlP (fuzzy file search)
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
