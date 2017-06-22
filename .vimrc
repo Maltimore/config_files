@@ -94,7 +94,6 @@ set grepprg=grep\ -nH\ $*
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
-
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_MultipleCompileFormats='pdf, bib,pdf'
 " let latex suite ignore warnings from the tex compiler
@@ -116,7 +115,7 @@ if has('nvim')
 	" go to normal mode with jk while in terminal
 	:tnoremap jk <C-\><C-n>
 	let g:python_host_prog = '/usr/bin/python'
-	let g:python3_host_prog = '~/miniconda3/bin/python'
+	let g:python3_host_prog = '/home/maltimore/miniconda3/bin/python'
 	" disable python 2 support
 	let g:loaded_python_provider = 1
 
