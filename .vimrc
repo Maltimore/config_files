@@ -70,7 +70,7 @@ Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'neomake/neomake'
 Plugin 'lifepillar/vim-solarized8'
 Plugin 'frankier/neovim-colors-solarized-truecolor-only'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'heavenshell/vim-pydocstring'
 Plugin 'junegunn/vim-easy-align'
 call vundle#end()
