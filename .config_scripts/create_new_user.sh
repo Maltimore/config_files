@@ -5,8 +5,12 @@ sudo apt-get -y install git-core
 cd ~
 git init
 git remote add origin https://github.com/Maltimore/config_files.git
-rm .bashrc
-git pull origin master
+# the following is a hacky workaround to replace all current config
+# files with the ones from the repository (normal merge impossible
+# due to untracked changes)
+git fetch origin master
+git checkout origin/master  # leaves us in headless state
+git checkout master         # back to local master branch
 
 git config --global user.name "maltimore"
 git config --global user.email "malte.esders@gmail.com"
