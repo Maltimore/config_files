@@ -5,16 +5,17 @@
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 # install the Ack searching program
 # (which is for searching for text in multiple files)
-sudo apt-get install -y ack-grep
+sudo apt install -y ack-grep
 # install the xsel program to be able to copy to system clipboard with "+y
-sudo apt-get install -y xsel
+sudo apt install -y xsel
 # install neovim
-sudo apt-get install -y software-properties-common
-sudo apt-get install -y neovim
-sudo apt-get install -y python-dev python-pip python3-dev python3-pip
+sudo apt install -y software-properties-common
+sudo apt install -y neovim
+sudo apt install -y python-dev python-pip python3-dev python3-pip
 # deactivate any active conda env to install nvim related programs
 # into the root conda env
 source deactivate
+# jupyter is needed for some python plugins
 conda install jupyter
 # install the neovim python package for python plugins
 pip install neovim
