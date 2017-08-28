@@ -15,6 +15,7 @@ sudo apt-get install -y python-dev python-pip python3-dev python3-pip
 # deactivate any active conda env to install nvim related programs
 # into the root conda env
 source deactivate
+conda install jupyter
 # install the neovim python package for python plugins
 pip install neovim
 # install grip for markdown-viewer
