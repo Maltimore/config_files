@@ -102,12 +102,12 @@ let g:Tex_IgnoredWarnings =
 let g:Tex_IgnoreLevel = 8
 
 " IPYTHON
-let g:nvim_ipy_perform_mappings = 0
-map <silent> <c-h> <Plug>(IPy-Run)
+"let g:nvim_ipy_perform_mappings = 0
+"map <silent> <c-h> <Plug>(IPy-Run)
 " run entire buffer with Ipython plugin
 "map <silent> ra <esc>ggVGrr<c-o>
 " terminate kernel
-map <silent> <c-k> <Plug>(IPy-Terminate)
+"map <silent> <c-k> <Plug>(IPy-Terminate)
 
 " NEOVIM
 " specifically for neovim:
