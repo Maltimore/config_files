@@ -8,12 +8,12 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 sudo apt-get install -y ack-grep
 # install the xsel program to be able to copy to system clipboard with "+y
 sudo apt-get install -y xsel
-# install neovim (only works on Ubuntu; no Debian packages yet)
+# install neovim
 sudo apt-get install -y software-properties-common
-sudo add-apt-repository -y ppa:neovim-ppa/unstable
-sudo apt-get update
 sudo apt-get install -y neovim
 sudo apt-get install -y python-dev python-pip python3-dev python3-pip
+# deactivate any active conda env to install nvim related programs
+# into the root conda env
 source deactivate
 # install the neovim python package for python plugins
 pip install neovim
