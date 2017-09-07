@@ -6,6 +6,7 @@ git config --global user.name "maltimore"
 git config --global user.email "malte.esders@gmail.com"
 # ignore some warning for a change to git 2.x
 git config --global push.default simple
+git config --global core.editor "nvim"
 
 cd ~
 git init
