@@ -66,7 +66,6 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'mileszs/ack.vim'
 Plugin 'JamshedVesuna/vim-markdown-preview'
-" Plugin 'vim-syntastic/syntastic'
 Plugin 'neomake/neomake'
 Plugin 'lifepillar/vim-solarized8'
 Plugin 'frankier/neovim-colors-solarized-truecolor-only'
@@ -115,7 +114,7 @@ if has('nvim')
 	" go to normal mode with jk while in terminal
 	:tnoremap jk <C-\><C-n>
 	let g:python_host_prog = '/usr/bin/python'
-	let g:python3_host_prog = '/home/maltimore/miniconda3/bin/python'
+	let g:python3_host_prog = $HOME . '/miniconda3/bin/python'
 	" disable python 2 support
 	let g:loaded_python_provider = 1
 
