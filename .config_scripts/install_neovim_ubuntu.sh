@@ -3,9 +3,6 @@
 
 # install vundle by just cloning it into the .vim/bundle directory
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-# install the Ack searching program
-# (which is for searching for text in multiple files)
-sudo apt install -y ack-grep
 # install the xsel program to be able to copy to system clipboard with "+y
 sudo apt install -y xsel
 # no idea what i need this for
