@@ -46,7 +46,7 @@ set termguicolors
 " make opening the .vimrc easier
 nnoremap <leader>ev :e $MYVIMRC<CR>
 " setting the pastetoggle
-set pastetoggle=<c-p>
+"set pastetoggle=<c-p>
 
 " VUNDLE
 " set the runtime path to include Vundle and initialize
@@ -75,14 +75,6 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'heavenshell/vim-pydocstring'
 Plugin 'junegunn/vim-easy-align'
 call vundle#end()
-
-" PYMODE
-"let g:pymode_rope = 0
-"let g:pymode_folding = 1
-"let g:pymode_indent = 1
-"let g:pymode_run = 1
-"let g:pymode_run_bind = '<leader>r'
-"let g:pymode_lint = 0
 
 " VIM-LATEX
 " REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
@@ -125,7 +117,6 @@ if has('nvim')
 	"
 	let g:terminal_scrollback_buffer_size = 100000
 endif
-
 
 " DEOPLETE
 " :let g:deoplete#enable_at_startup = 1
