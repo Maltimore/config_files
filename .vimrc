@@ -147,15 +147,6 @@ let vim_markdown_preview_github=1
 set background=dark " or dark
 colorscheme solarized
 
-" SYNTASTIC
-" On by default
-"let g:syntastic_mode_map = { 'mode': 'active',
-"    \ 'active_filetypes': [],
-"    \ 'passive_filetypes': [] }
-" Use flake8
-" let g:syntastic_python_checkers = ['flake8']
-command E Ex
-
 " CtrlP (fuzzy file search)
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
