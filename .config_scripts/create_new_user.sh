@@ -1,7 +1,9 @@
 #!/bin/bash
 sudo apt-get update
-sudo apt-get -y install git-core
 
+####################################################################################################
+# GIT 
+sudo apt-get -y install git-core
 git config --global user.name "maltimore"
 git config --global user.email "malte.esders@gmail.com"
 # ignore some warning for a change to git 2.x
@@ -20,12 +22,20 @@ git checkout master         # back to local master branch,
 							# strangely now all commits from
 							# origin are here too
 
-# download and install miniconda3
+####################################################################################################
+# MINICONDA
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh 
 bash Miniconda3-latest-Linux-x86_64.sh
 
 # create py36 environment
 conda create -n py36 python=3.6
+
+####################################################################################################
+# smaller programs
+# SCREEN
+sudo apt install -y screen
+# ACK
+sudo apt install -y ack-grep
 
 source ~/.bashrc
 
