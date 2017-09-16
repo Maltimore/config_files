@@ -29,6 +29,8 @@ set mouse=a
 " make searching case insensitive when search string is only lowercase
 set ignorecase
 set smartcase
+" use 24 bit color
+set termguicolors
 
 " REMAPPING
 " remap o so that it doesn't go to insert mode
@@ -120,6 +122,8 @@ if has('nvim')
 
     " use neovims inccommand to highlight replacings
 	" set inccommand=nosplit
+	"
+	let g:terminal_scrollback_buffer_size = 100000
 endif
 
 
@@ -138,9 +142,9 @@ endif
 " note: hotkey for viewing is <c-p>
 let vim_markdown_preview_github=1
 
+" SYNTAX HIGHLIGHTING
 " neovim-colors-solarized-truecolor-only plugin
-set termguicolors
-set background=light " or dark
+set background=dark " or dark
 colorscheme solarized
 
 " SYNTASTIC
