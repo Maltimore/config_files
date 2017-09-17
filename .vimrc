@@ -45,8 +45,8 @@ set termguicolors
 :vmap -# :s#^\###<cr>:noh<cr>
 " make opening the .vimrc easier
 nnoremap <leader>ev :e $MYVIMRC<CR>
-" setting the pastetoggle
-"set pastetoggle=<c-p>
+" some plugins tries to remap the :E command, here we get it back
+command E Ex
 
 " VUNDLE
 " set the runtime path to include Vundle and initialize
