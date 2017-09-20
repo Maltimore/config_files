@@ -150,7 +150,9 @@ colorscheme solarized
 "    \ 'passive_filetypes': [] }
 " Use flake8
 " let g:syntastic_python_checkers = ['flake8']
-command E Ex
+if !exists(":E")
+	command E Ex
+endif
 
 " CtrlP (fuzzy file search)
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
@@ -180,3 +182,8 @@ let g:neomake_python_flake8_maker = {
 let g:neomake_python_enabled_makers = ['flake8']
 " run :Neomake every time I save or open a file
 autocmd! BufWritePost,BufEnter * Neomake
+
+" ACK OR AG
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
