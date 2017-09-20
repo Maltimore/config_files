@@ -37,6 +37,8 @@ set switchbuf=useopen,usetab
 if !exists(":E")
 	command E Ex
 endif
+" open help in an [only] window
+autocmd FileType help on
 
 " REMAPPING
 " remap o so that it doesn't go to insert mode
