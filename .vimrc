@@ -29,6 +29,8 @@ set mouse=a
 " make searching case insensitive when search string is only lowercase
 set ignorecase
 set smartcase
+" use 24 bit color
+set termguicolors
 
 " REMAPPING
 " remap o so that it doesn't go to insert mode
@@ -43,8 +45,10 @@ set smartcase
 :vmap -# :s#^\###<cr>:noh<cr>
 " make opening the .vimrc easier
 nnoremap <leader>ev :e $MYVIMRC<CR>
-" setting the pastetoggle
-set pastetoggle=<c-p>
+" some plugins tries to remap the :E command, here we get it back
+if !exists(":E")
+	command E Ex
+endif
 
 " VUNDLE
 " set the runtime path to include Vundle and initialize
@@ -73,14 +77,6 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'heavenshell/vim-pydocstring'
 Plugin 'junegunn/vim-easy-align'
 call vundle#end()
-
-" PYMODE
-"let g:pymode_rope = 0
-"let g:pymode_folding = 1
-"let g:pymode_indent = 1
-"let g:pymode_run = 1
-"let g:pymode_run_bind = '<leader>r'
-"let g:pymode_lint = 0
 
 " VIM-LATEX
 " REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
@@ -120,8 +116,9 @@ if has('nvim')
 
     " use neovims inccommand to highlight replacings
 	" set inccommand=nosplit
+	"
+	let g:terminal_scrollback_buffer_size = 100000
 endif
-
 
 " DEOPLETE
 " :let g:deoplete#enable_at_startup = 1
@@ -138,21 +135,10 @@ endif
 " note: hotkey for viewing is <c-p>
 let vim_markdown_preview_github=1
 
+" SYNTAX HIGHLIGHTING
 " neovim-colors-solarized-truecolor-only plugin
-set termguicolors
-set background=light " or dark
+set background=dark " or dark
 colorscheme solarized
-
-" SYNTASTIC
-" On by default
-"let g:syntastic_mode_map = { 'mode': 'active',
-"    \ 'active_filetypes': [],
-"    \ 'passive_filetypes': [] }
-" Use flake8
-" let g:syntastic_python_checkers = ['flake8']
-if !exists(":E")
-	command E Ex
-endif
 
 " CtrlP (fuzzy file search)
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']

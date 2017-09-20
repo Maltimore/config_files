@@ -1,1 +1,5 @@
 --ignore-dir=build/
+--ignore-dir=cache/
+--ignore-dir=.mozilla/
+--ignore-dir=miniconda3/
+

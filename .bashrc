@@ -149,3 +149,6 @@ else
  PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(parse_git_branch)\$ '
 fi
 unset color_prompt force_color_prompt
+
+# powerline
+. /usr/share/powerline/bindings/bash/powerline.sh
