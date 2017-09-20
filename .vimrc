@@ -31,6 +31,12 @@ set ignorecase
 set smartcase
 " use 24 bit color
 set termguicolors
+" jump to other windows when switching buffers
+set switchbuf=useopen,usetab
+" some plugins tries to remap the :E command, here we get it back
+if !exists(":E")
+	command E Ex
+endif
 
 " REMAPPING
 " remap o so that it doesn't go to insert mode
@@ -45,10 +51,6 @@ set termguicolors
 :vmap -# :s#^\###<cr>:noh<cr>
 " make opening the .vimrc easier
 nnoremap <leader>ev :e $MYVIMRC<CR>
-" some plugins tries to remap the :E command, here we get it back
-if !exists(":E")
-	command E Ex
-endif
 
 " VUNDLE
 " set the runtime path to include Vundle and initialize
