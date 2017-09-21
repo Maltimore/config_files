@@ -80,6 +80,7 @@ Plugin 'frankier/neovim-colors-solarized-truecolor-only'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'heavenshell/vim-pydocstring'
 Plugin 'junegunn/vim-easy-align'
+Plugin 'tpope/vim-vinegar'
 call vundle#end()
 
 " VIM-LATEX
