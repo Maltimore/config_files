@@ -11,11 +11,9 @@ sudo apt install -y software-properties-common
 sudo apt install -y neovim
 # it's not clear to me whether this is needed
 sudo apt install -y python3-dev
-# deactivate any active conda env to install nvim related programs
-# into the root conda env
-source deactivate
-# jupyter is needed for some python plugins
-conda install jupyter
+# create a conda environment specially for neovim
+conda create -y -n neovim_env python
+source activate neovim_env
 # install the neovim python package for python plugins
 pip install neovim
 # install grip for markdown-viewer
