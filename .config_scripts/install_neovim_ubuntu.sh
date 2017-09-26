@@ -20,6 +20,8 @@ pip install neovim
 pip install grip
 # install flake8 for syntastic
 pip install flake8
+# install jedi (python comprehension library)
+pip install jedi
 # use Vundle to install all plugins, but first install cmake
 sudo apt-get install -y build-essential cmake
 nvim +PluginInstall +qall
