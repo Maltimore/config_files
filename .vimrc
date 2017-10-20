@@ -81,6 +81,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'heavenshell/vim-pydocstring'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'tpope/vim-vinegar'
+Plugin 'Yggdroot/indentLine'
 call vundle#end()
 
 " VIM-LATEX
