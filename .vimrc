@@ -164,7 +164,7 @@ let g:jedi#show_call_signatures_delay = 1000
 " NEOMAKE
 let g:neomake_python_flake8_maker = {
 	\ 'exe': $HOME . '/miniconda3/envs/neovim_env/bin/flake8',
-    \ 'args': ['--ignore=E126,E266,E265,E402,E241',  '--format=default', '--max-line-length=120'],
+    \ 'args': ['--ignore=E126,E266,E265,E402,E241,E203',  '--format=default', '--max-line-length=120'],
     \ 'errorformat':
         \ '%E%f:%l: could not compile,%-Z%p^,' .
         \ '%A%f:%l:%c: %t%n %m,' .
