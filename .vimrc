@@ -37,6 +37,12 @@ if !exists(":E")
 endif
 " open help in an [only] window
 autocmd FileType help on
+" highlight search
+set hlsearch
+" search as you type
+set incsearch
+" make it possible to make an unwritten buffer hidden
+set hidden
 
 " REMAPPING
 " remap o so that it doesn't go to insert mode
