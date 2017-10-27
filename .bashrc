@@ -152,4 +152,4 @@ fi
 unset color_prompt force_color_prompt
 
 # powerline
-. /usr/share/powerline/bindings/bash/powerline.sh
+source /usr/share/powerline/bindings/bash/powerline.sh
