@@ -24,8 +24,6 @@ endif
 let g:netrw_liststyle=3 
 " mouse interoperability
 set mouse=a
-" auto indent the next line after hitting enter
-"set autoindent
 " make searching case insensitive when search string is only lowercase
 set ignorecase
 set smartcase
@@ -174,3 +172,7 @@ let g:neomake_python_flake8_maker = {
 let g:neomake_python_enabled_makers = ['flake8']
 " run :Neomake every time I save or open a file
 autocmd! BufWritePost,BufEnter * Neomake
+
+" INDENTLINCE
+" do not use for latex, markdown
+let g:indentLine_fileTypeExclude = ['tex', 'markdown']
