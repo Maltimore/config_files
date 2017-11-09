@@ -64,7 +64,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-"Plugin 'python-mode/python-mode'
 Plugin 'vim-latex/vim-latex'
 Plugin 'tpope/vim-surround'
 Plugin 'bfredl/nvim-ipy'
@@ -84,7 +83,6 @@ Plugin 'frankier/neovim-colors-solarized-truecolor-only'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'heavenshell/vim-pydocstring'
 Plugin 'junegunn/vim-easy-align'
-Plugin 'tpope/vim-vinegar'
 Plugin 'Yggdroot/indentLine'
 call vundle#end()
 
