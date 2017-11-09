@@ -1,4 +1,4 @@
-font.size			: 13.0
+font.size			: 14.0
 
 # reduce the amount of whitespace around savefigs (standard and tight are available)
 savefig.bbox        : tight
