@@ -3,4 +3,6 @@
 max-line-length = 120
 # E241: multiple spaces after ':'
 # E203: space before ':'
-ignore = E126,E266,E265,E402,E241,E203
+# #127: some indentation stuff
+# E128: line underindented for visual indent
+ignore = E126,E127,E128,E266,E265,E402,E241,E203
