@@ -3,4 +3,8 @@
 max-line-length = 120
 # E241: multiple spaces after ':'
 # E203: space before ':'
-ignore = E126,E266,E265,E402,E241,E203
+# E111: indentation not multiple of four
+# E222: multiple whitespace before operator
+# E113: unexpected indentation
+# E999: unexpected indentation (yes these two (E113) both)
+ignore = E111,E222,E126,E266,E265,E402,E241,E203,E999 
