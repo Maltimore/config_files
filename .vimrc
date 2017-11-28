@@ -45,6 +45,9 @@ set incsearch
 set hidden
 
 " REMAPPING
+" remap o so that it doesn't go to insert mode
+:map o o<esc>
+:map O O<esc>
 " remap jk to exit insert mode
 :imap jk <C-[>
 " remap sl so that i can use it for the command to switch buffers
