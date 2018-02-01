@@ -8,11 +8,11 @@ git config --global user.name "maltimore"
 git config --global user.email "malte.esders@gmail.com"
 # ignore some warning for a change to git 2.x
 git config --global push.default simple
-git config --global core.editor "nvim"
+git config --global core.editor "vim"
 
 cd ~
 git init
-git remote add origin git@github.com/Maltimore/config_files.git
+git remote add origin https://github.com/Maltimore/config_files.git
 # the following is a hacky workaround to replace all current config
 # files with the ones from the repository (normal merge impossible
 # due to untracked changes)
