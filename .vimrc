@@ -28,7 +28,9 @@ set mouse=a
 set ignorecase
 set smartcase
 " use 24 bit color
-set termguicolors
+if has('nvim')
+	set termguicolors
+endif
 " jump to other windows when switching buffers
 set switchbuf=useopen,usetab
 " some plugins tries to remap the :E command, here we get it back
