@@ -11,3 +11,5 @@ alias egrep='egrep --color=auto'
 # ag
 # don't ignore files in .gitignore
 alias ag='ag -U'
+
+alias rs='git_upd ida /home/malte/reinforcement_stm'

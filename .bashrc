@@ -88,11 +88,6 @@ fi
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# source ~/.bash_aliases
-if [ -f ~/.bash_aliases ]; then
-    source ~/.bash_aliases
-fi
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -105,7 +100,7 @@ if ! shopt -oq posix; then
 fi
 
 export PATH="$HOME/miniconda3/bin:$PATH"
-source activate py36
+source activate tf
 
 #export LD_LIBRARY_PATH=$HOME/my_libc_env/lib/x86_64-linux-gnu/:$HOME/my_libc_env/usr/lib64/:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/n/coxfs01/maltimore/cudnn/cuda/lib64:$LD_LIBRARY_PATH
@@ -142,5 +137,14 @@ else
 fi
 unset color_prompt force_color_prompt
 
+git_upd() {
+	git diff origin/master | ssh "${1}" " git -C '${2}' reset --hard origin/master; git -C '${2}' apply - " 
+}
+
 # powerline
 source /usr/share/powerline/bindings/bash/powerline.sh
+
+# source ~/.bash_aliases
+if [ -f ~/.bash_aliases ]; then
+    source ~/.bash_aliases
+fi
