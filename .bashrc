@@ -138,7 +138,7 @@ fi
 unset color_prompt force_color_prompt
 
 git_upd() {
-	git diff origin/master | ssh "${1}" " git -C '${2}' reset --hard origin/master; git -C '${2}' apply - " 
+	git diff origin/master | ssh "${1}" " git -C '${2}' reset --hard origin/master; git -C '${2}' clean -df; git -C '${2}' apply - " 
 }
 
 # powerline
