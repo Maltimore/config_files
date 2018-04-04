@@ -142,7 +142,9 @@ git_upd() {
 }
 
 # powerline
-source /usr/share/powerline/bindings/bash/powerline.sh
+if [ -f /usr/share/powerline/bindings/bash/powerline.sh ]; then
+	source /usr/share/powerline/bindings/bash/powerline.sh
+fi
 
 # source ~/.bash_aliases
 if [ -f ~/.bash_aliases ]; then
