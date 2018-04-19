@@ -43,3 +43,5 @@ source ~/.bashrc
 # run "ipython profile create"
 # edit ~/.ipython/profile_default/ipython_config.py
 # search for "color" and change for example to LightBG
+# and to change the editing mode to vi:
+#c.TerminalInteractiveShell.editing_mode = 'vi'
