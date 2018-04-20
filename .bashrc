@@ -103,6 +103,8 @@ conda_initialize_path="$HOME"/miniconda3/etc/profile.d/conda.sh
 source $conda_initialize_path
 conda activate tf
 
+export PATH=$PATH:"$HOME"/bin
+
 #export LD_LIBRARY_PATH=$HOME/my_libc_env/lib/x86_64-linux-gnu/:$HOME/my_libc_env/usr/lib64/:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/n/coxfs01/maltimore/cudnn/cuda/lib64:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/n/coxfs01/maltimore/cuda/cuda_8_0/lib64:$LD_LIBRARY_PATH
