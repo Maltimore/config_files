@@ -85,6 +85,7 @@ Plugin 'frankier/neovim-colors-solarized-truecolor-only'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'heavenshell/vim-pydocstring'
 Plugin 'junegunn/vim-easy-align'
+" indentLine is to show the tabstops for indentation as a dotted line
 Plugin 'Yggdroot/indentLine'
 call vundle#end()
 
@@ -163,7 +164,7 @@ let g:jedi#force_py_version = 3
 " jedi vim should not complete at all, I just want the other features
 let g:jedi#completions_enabled = 0
 " set the delay in ms until jedi-vim shows call signatures
-let g:jedi#show_call_signatures_delay = 1000
+let g:jedi#show_call_signatures_delay = 100
 
 " NEOMAKE
 let g:neomake_python_flake8_maker = {
@@ -179,6 +180,6 @@ let g:neomake_python_enabled_makers = ['flake8']
 " run :Neomake every time I save or open a file
 autocmd! BufWritePost,BufEnter * Neomake
 
-" INDENTLINCE
+" INDENTLINE
 " do not use for latex, markdown
 let g:indentLine_fileTypeExclude = ['tex', 'markdown']
