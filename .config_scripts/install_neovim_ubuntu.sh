@@ -13,7 +13,7 @@ sudo apt install -y neovim
 sudo apt install -y python3-dev
 # create a conda environment specially for neovim
 conda create -y -n neovim_env python
-source activate neovim_env
+conda activate neovim_env
 # install the neovim python package for python plugins
 pip install neovim
 # install grip for markdown-viewer
