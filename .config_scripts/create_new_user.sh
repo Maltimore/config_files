@@ -17,6 +17,8 @@ git remote add origin https://github.com/Maltimore/config_files.git
 # files with the ones from the repository (normal merge impossible
 # due to untracked changes)
 git fetch origin master
+# otherwise the checkout won't work
+rm ~/.bashrc
 git checkout origin/master  # leaves us in headless state
 git checkout master         # back to local master branch, 
 							# strangely now all commits from
