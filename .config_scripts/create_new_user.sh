@@ -5,10 +5,10 @@ sudo apt-get update
 # GIT 
 sudo apt-get -y install git-core
 git config --global user.name "maltimore"
-git config --global user.email "malte.esders@gmail.com"
+git config --global user.email "malte@esders.info"
 # ignore some warning for a change to git 2.x
 git config --global push.default simple
-git config --global core.editor "vim"
+git config --global core.editor "vi"
 
 cd ~
 git init
@@ -24,18 +24,17 @@ git checkout master         # back to local master branch,
 
 ####################################################################################################
 # MINICONDA
+# for the time being, we have to install bzip2 manually (likely to change in the future)
+sudo apt-get -y install bzip2
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh 
 bash Miniconda3-latest-Linux-x86_64.sh
-
-# create py36 environment
-conda create -n py36 python=3.6
 
 ####################################################################################################
 # smaller programs
 # SCREEN
-sudo apt install -y screen
+sudo apt install -y tmux
 # ACK
-sudo apt install -y ack-grep
+sudo apt install -y silversearcher-ag
 
 source ~/.bashrc
 
