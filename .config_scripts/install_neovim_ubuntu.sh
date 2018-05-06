@@ -1,6 +1,10 @@
 #!/bin/bash
 # there are problems if the first file I edit with neovim is with "sudo nvim"
 
+# ATTENTION
+# for the moment, conda activate neovim_env doesn't work for some reason,
+# and we need to run this command before running this script
+
 # install vundle by just cloning it into the .vim/bundle directory
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 # install the xsel program to be able to copy to system clipboard with "+y
