@@ -101,7 +101,6 @@ fi
 
 conda_initialize_path="$HOME"/miniconda3/etc/profile.d/conda.sh
 source $conda_initialize_path
-conda activate tf
 
 export PATH=$PATH:"$HOME"/bin
 
