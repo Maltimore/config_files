@@ -183,3 +183,8 @@ autocmd! BufWritePost,BufEnter * Neomake
 " INDENTLINE
 " do not use for latex, markdown
 let g:indentLine_fileTypeExclude = ['tex', 'markdown']
+
+" ACK.VIM
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
