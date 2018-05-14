@@ -164,7 +164,7 @@ let g:jedi#force_py_version = 3
 " jedi vim should not complete at all, I just want the other features
 let g:jedi#completions_enabled = 0
 " set the delay in ms until jedi-vim shows call signatures
-let g:jedi#show_call_signatures_delay = 100
+let g:jedi#show_call_signatures_delay = 1000
 
 " NEOMAKE
 let g:neomake_python_flake8_maker = {
