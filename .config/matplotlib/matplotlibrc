@@ -1,7 +1,23 @@
-font.size			: 14.0
+backend				: TkAgg
 
+# latex
+text.latex.preamble : \usepackage{amsmath}, \usepackage{amssymb}, \usepackage{cmbright}
+text.usetex         : True
+text.latex.unicode  : True
+
+# figure design
+axes.labelsize: 12
+axes.titlesize: 12
+font.size: 12
+legend.fontsize: 12
+xtick.labelsize: 12
+ytick.labelsize: 12
+ps.usedistiller: xpdf
+figure.figsize: 6.9, 4.264
+figure.dpi: 100 
+font.family: serif
+savefig.dpi: 300
+savefig.pad_inches: 0.0
+savefig.format: png
 # reduce the amount of whitespace around savefigs (standard and tight are available)
 savefig.bbox        : tight
-
-# plotting backend
-backend				: Agg
