@@ -14,10 +14,10 @@ xtick.labelsize: 12
 ytick.labelsize: 12
 ps.usedistiller: xpdf
 figure.figsize: 6.9, 4.264
-figure.dpi: 100 
-font.family: serif
+figure.dpi: 200 
+font.family: sans-serif
 savefig.dpi: 300
-savefig.pad_inches: 0.0
+savefig.pad_inches: 0.01
 savefig.format: png
 # reduce the amount of whitespace around savefigs (standard and tight are available)
-savefig.bbox        : tight
+savefig.bbox: tight
