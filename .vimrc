@@ -68,7 +68,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-latex/vim-latex'
 Plugin 'tpope/vim-surround'
-" Plugin 'bfredl/nvim-ipy'
+Plugin 'bfredl/nvim-ipy'
 Plugin 'davidhalter/jedi-vim'
 " Plugin 'Shougo/deoplete.nvim'
 " Plugin 'zchee/deoplete-jedi'
@@ -108,12 +108,13 @@ let g:Tex_IgnoredWarnings =
 let g:Tex_IgnoreLevel = 8
 
 " IPYTHON
-"let g:nvim_ipy_perform_mappings = 0
-"map <silent> <c-h> <Plug>(IPy-Run)
+let g:nvim_ipy_perform_mappings = 0
+map <silent> <c-h> <Plug>(IPy-Run)
+map <silent> <c-j> <Plug>(IPy-RunCell)
 " run entire buffer with Ipython plugin
 "map <silent> ra <esc>ggVGrr<c-o>
 " terminate kernel
-"map <silent> <c-k> <Plug>(IPy-Terminate)
+map <silent> <c-k> <Plug>(IPy-Terminate)
 
 " NEOVIM
 " specifically for neovim:
@@ -169,7 +170,7 @@ let g:jedi#show_call_signatures_delay = 1000
 " NEOMAKE
 let g:neomake_python_flake8_maker = {
 	\ 'exe': $HOME . '/miniconda3/envs/neovim_env/bin/flake8',
-    \ 'args': ['--ignore=E111,E113,E126,E222,E266,E265,E402,E241,E201,E203,E999',  '--format=default', '--max-line-length=100'],
+    \ 'args': ['--ignore=E111,E113,E126,E127,E222,E266,E265,E402,E241,E201,E203,E999',  '--format=default', '--max-line-length=100'],
     \ 'errorformat':
         \ '%E%f:%l: could not compile,%-Z%p^,' .
         \ '%A%f:%l:%c: %t%n %m,' .
