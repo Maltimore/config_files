@@ -3,10 +3,7 @@
 
 # ATTENTION
 # for the moment, conda activate neovim_env doesn't work for some reason,
-# and we need to run this command before running this script
-# ---
-# although, maybe doing source ~/.bashrc fixes this (test next time)
-source ~/.bashrc
+# and we need to create and activate neovim_env conda environment outside this script beforehand
 
 # install vundle by just cloning it into the .vim/bundle directory
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
