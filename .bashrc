@@ -101,8 +101,9 @@ fi
 
 conda_initialize_path="$HOME"/miniconda3/etc/profile.d/conda.sh
 source $conda_initialize_path
-conda activate tf
+conda activate
 
+# add the bin directory in the home folder to the path
 export PATH=$PATH:"$HOME"/bin
 
 #export LD_LIBRARY_PATH=$HOME/my_libc_env/lib/x86_64-linux-gnu/:$HOME/my_libc_env/usr/lib64/:$LD_LIBRARY_PATH
