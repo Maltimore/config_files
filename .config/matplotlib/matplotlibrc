@@ -3,7 +3,6 @@ backend				: TkAgg
 # latex
 text.latex.preamble : \usepackage{amsmath}, \usepackage{amssymb}, \usepackage{cmbright}
 text.usetex         : True
-text.latex.unicode  : True
 
 # figure design
 axes.labelsize: 12
