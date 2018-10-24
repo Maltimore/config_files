@@ -45,6 +45,8 @@ set hlsearch
 set incsearch
 " make it possible to make an unwritten buffer hidden
 set hidden
+" make it possible to save with root rights
+command! -nargs=0 Sw w !sudo tee % > /dev/null
 
 " REMAPPING
 " remap o so that it doesn't go to insert mode
