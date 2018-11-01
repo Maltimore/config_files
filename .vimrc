@@ -27,10 +27,6 @@ set mouse=a
 " make searching case insensitive when search string is only lowercase
 set ignorecase
 set smartcase
-" use 24 bit color
-if has('nvim')
-	set termguicolors
-endif
 " jump to other windows when switching buffers
 set switchbuf=useopen,usetab
 " some plugins tries to remap the :E command, here we get it back
@@ -121,6 +117,8 @@ map <silent> <c-k> <Plug>(IPy-Terminate)
 " NEOVIM
 " specifically for neovim:
 if has('nvim')
+	" use 24 bit color
+	set termguicolors
 	" go to normal mode with jk while in terminal
 	:tnoremap jk <C-\><C-n>
 	let g:python_host_prog = '/usr/bin/python'
@@ -133,12 +131,6 @@ if has('nvim')
 	let g:terminal_scrollback_buffer_size = 100000
 endif
 
-" DEOPLETE
-" :let g:deoplete#enable_at_startup = 1
-" inoremap <silent><expr> <Tab>
-" \ pumvisible() ? "\<C-n>" :
-" \ deoplete#mappings#manual_complete()
-
 " VIM-SESSION
 " let the vim-session plugin not ask to save/load every session
 :let g:session_autoload = "no"
@@ -150,7 +142,7 @@ let vim_markdown_preview_github=1
 
 " SYNTAX HIGHLIGHTING
 " neovim-colors-solarized-truecolor-only plugin
-set background=dark " or dark
+set background=dark " dark/light
 colorscheme solarized
 
 " CtrlP (fuzzy file search)
