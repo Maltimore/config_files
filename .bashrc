@@ -133,3 +133,6 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 export EDITOR=vi
+
+export MKL_NUM_THREADS=100
+export OMP_NUM_THREADS=100
