@@ -11,3 +11,6 @@ alias egrep='egrep --color=auto'
 # ag
 # don't ignore files in .gitignore
 alias ag='ag -U'
+
+# temporarily
+alias nvim='maltimore_you_should_learn_to_use_vim_instead_of_nvim_as_a_command'
