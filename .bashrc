@@ -134,5 +134,5 @@ fi
 
 export EDITOR=vi
 
-export MKL_NUM_THREADS=100
-export OMP_NUM_THREADS=100
+export MKL_NUM_THREADS=1
+export OMP_NUM_THREADS=1
