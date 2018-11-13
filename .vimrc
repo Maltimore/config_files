@@ -76,7 +76,7 @@ Plugin 'vim-scripts/IndexedSearch'
 Plugin 'mileszs/ack.vim'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'neomake/neomake'
-Plugin 'romainl/flattened'
+Plugin 'frankier/neovim-colors-solarized-truecolor-only'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'heavenshell/vim-pydocstring'
 " Plugin 'junegunn/vim-easy-align'
@@ -138,8 +138,10 @@ endif
 let vim_markdown_preview_github=1
 
 " SYNTAX HIGHLIGHTING
-" provided by flattened plugin
-colorscheme flattened_dark
+" frankier/neovim-colors-solarized-truecolor-only
+set termguicolors
+colorscheme solarized
+set background=dark
 
 " CtrlP (fuzzy file search)
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
