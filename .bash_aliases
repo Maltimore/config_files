@@ -14,6 +14,7 @@ alias ag='ag -U'
 
 # git status
 alias s='git status'
+alias d='git diff'
 
 # temporarily
 alias nvim='maltimore_you_should_learn_to_use_vim_instead_of_nvim_as_a_command'
