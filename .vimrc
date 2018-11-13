@@ -179,3 +179,6 @@ let g:indentLine_fileTypeExclude = ['tex', 'markdown']
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+
+" VIM-AIRLINE symbols
+let g:airline_powerline_fonts = 1
