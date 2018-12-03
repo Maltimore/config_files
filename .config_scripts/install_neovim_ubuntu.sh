@@ -7,8 +7,8 @@
 
 # install vundle by just cloning it into the .vim/bundle directory
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-# install the xsel program to be able to copy to system clipboard with "+y
-sudo apt install -y xsel
+# install the xclip program to be able to copy to system clipboard with "+y
+sudo apt install -y xclip
 
 # install neovim
 sudo apt install -y neovim
