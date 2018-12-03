@@ -50,7 +50,7 @@ command! -nargs=0 Sw w !sudo tee % > /dev/null
 :map O O<esc>
 " remap jk to exit insert mode
 :imap jk <C-[>
-" remap sl so that i can use it for the command to switch buffers
+" remap sl so that i can use it for the command to switch windows
 :nmap sl <C-w>
 " make it easier to comment lines in python
 :vmap  # :s#^#\##<cr>:noh<cr>

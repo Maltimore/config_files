@@ -33,9 +33,9 @@ bash Miniconda3-latest-Linux-x86_64.sh
 
 ####################################################################################################
 # smaller programs
-# SCREEN
+# TMUX
 sudo apt install -y tmux
-# ACK
+# AG
 sudo apt install -y silversearcher-ag
 
 source ~/.bashrc
