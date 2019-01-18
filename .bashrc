@@ -103,8 +103,8 @@ conda_initialize_path="$HOME"/miniconda3/etc/profile.d/conda.sh
 source $conda_initialize_path
 conda activate
 
-# add the bin directory in the home folder to the path
-export PATH=$PATH:"$HOME"/bin
+# add the ~/.bin and ~/programs directory in the home folder to the path
+export PATH="$HOME"/.bin:"$HOME"/programs/:$PATH
 
 # COLORED PROMPT
 # Add git branch if its present to PS1
