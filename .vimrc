@@ -82,6 +82,7 @@ Plugin 'heavenshell/vim-pydocstring'
 " Plugin 'junegunn/vim-easy-align'
 " indentLine is to show the tabstops for indentation as a dotted line
 Plugin 'Yggdroot/indentLine'
+Plugin 'szymonmaszke/vimpyter'
 call vundle#end()
 
 " VIM-LATEX
