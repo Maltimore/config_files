@@ -19,7 +19,7 @@ conda activate neovim_env
 
 # PACKAGES FOR PLUGINS
 # install the neovim python package for python plugins
-pip install neovim
+pip install pynvim
 # markdown-viewer
 pip install grip
 sudo apt-get install -y xdotool
