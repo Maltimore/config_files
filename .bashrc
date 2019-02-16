@@ -99,8 +99,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-#conda_initialize_path="$HOME"/miniconda3/etc/profile.d/conda.sh
-#source $conda_initialize_path
+conda_initialize_path="$HOME"/miniconda3/etc/profile.d/conda.sh
+source $conda_initialize_path
 #conda activate
 
 # add the ~/.bin and ~/programs directory in the home folder to the path
