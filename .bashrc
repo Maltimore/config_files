@@ -99,9 +99,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
-conda_initialize_path="$HOME"/miniconda3/etc/profile.d/conda.sh
-source $conda_initialize_path
-conda activate
+#conda_initialize_path="$HOME"/miniconda3/etc/profile.d/conda.sh
+#source $conda_initialize_path
+#conda activate
 
 # add the ~/.bin and ~/programs directory in the home folder to the path
 export PATH="$HOME"/.bin:"$HOME"/programs/:$PATH
@@ -136,3 +136,18 @@ export EDITOR=vi
 
 export MKL_NUM_THREADS=1
 export OMP_NUM_THREADS=1
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/maltimore/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/maltimore/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/maltimore/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/maltimore/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
