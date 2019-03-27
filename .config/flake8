@@ -5,10 +5,11 @@ max-line-length = 120
 # E113: unexpected indentation
 # E127: overintented for visual indent
 # E203: space before ':'
+# E221: multiple spaces before operator
 # E222: multiple whitespace before operator
 # E241: multiple spaces after ':'
 # E501: line too long
 # E741: ambiguous variable name
 # E999: unexpected indentation (yes these two (E113) both)
 # W504: binary operator before newline
-ignore = E111,E222,E126,E127,E266,E265,E402,E241,E203,E501,E999,W504
+ignore = E111,E221,E222,E126,E127,E266,E265,E402,E241,E203,E501,E999,W504
