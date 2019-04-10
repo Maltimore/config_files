@@ -43,6 +43,11 @@ set incsearch
 set hidden
 " make it possible to save with root rights
 command! -nargs=0 Sw w !sudo tee % > /dev/null
+" make it such that the preview window is opened below the current window
+augroup PreviewOnBottom
+    autocmd InsertEnter * set splitbelow
+    autocmd InsertLeave * set splitbelow!
+augroup END
 
 " REMAPPING
 " remap o so that it doesn't go to insert mode
@@ -125,7 +130,7 @@ if has('nvim')
 	" go to normal mode with jk while in terminal
 	:tnoremap jk <C-\><C-n>
 	let g:python_host_prog = '/usr/bin/python'
-	let g:python3_host_prog = $HOME . '/miniconda3/envs/neovim_env/bin/python'
+	let g:python3_host_prog = $HOME . '/miniconda3/bin/python'
 	" disable python 2 support
 	let g:loaded_python_provider = 1
 
@@ -166,9 +171,10 @@ nmap ga <Plug>(EasyAlign)
 " JEDI-VIM
 let g:jedi#force_py_version = 3
 " jedi vim should not complete at all, I just want the other features
-let g:jedi#completions_enabled = 0
+" let g:jedi#completions_enabled = 0
 " set the delay in ms until jedi-vim shows call signatures
-let g:jedi#show_call_signatures_delay = 1000
+" let g:jedi#show_call_signatures_delay = 100
+let g:jedi#use_splits_not_buffers = "bottom"
 
 " NEOMAKE
 let g:neomake_python_flake8_maker = {
