@@ -3,6 +3,7 @@
 max-line-length = 120
 # E111: indentation not multiple of four
 # E113: unexpected indentation
+# E116: unexpected indentatino (comment)
 # E127: overintented for visual indent
 # E203: space before ':'
 # E221: multiple spaces before operator
