@@ -102,7 +102,7 @@ fi
 conda_initialize_path="$HOME"/miniconda3/etc/profile.d/conda.sh
 source $conda_initialize_path
 conda activate
-conda activate torch
+conda activate jupyterlab
 
 # add the ~/.bin and ~/programs directory in the home folder to the path
 export PATH="$HOME"/.bin:"$HOME"/programs/:$PATH
