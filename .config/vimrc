@@ -48,6 +48,9 @@ augroup PreviewOnBottom
     autocmd InsertEnter * set splitbelow
     autocmd InsertLeave * set splitbelow!
 augroup END
+" do not show the docstring window. To show the docstring window, need to
+" (also) select preview here (comma separated list)
+set completeopt=menu
 
 " REMAPPING
 " remap o so that it doesn't go to insert mode
@@ -86,7 +89,7 @@ if has('nvim')
 else
 	Plugin 'lifepillar/vim-solarized8'
 endif
-
+Plugin 'ervandew/supertab'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'heavenshell/vim-pydocstring'
 " Plugin 'junegunn/vim-easy-align'
@@ -169,12 +172,19 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " JEDI-VIM
+" force python version
 let g:jedi#force_py_version = 3
-" jedi vim should not complete at all, I just want the other features
+" jedi-vim should not complete at all, I just want the other features
 " let g:jedi#completions_enabled = 0
 " set the delay in ms until jedi-vim shows call signatures
-" let g:jedi#show_call_signatures_delay = 100
-let g:jedi#use_splits_not_buffers = "bottom"
+let g:jedi#show_call_signatures_delay = 100
+" where to show the call signatures (0: not at all, 1: in a popup, 2: in the
+" command line
+let showmode = 0
+let g:jedi#show_call_signatures = 1
+" in autocompletion, automatically select the first line. I set this to false
+" such that hitting tab will select the first one
+let g:jedi#popup_select_first = 0
 
 " NEOMAKE
 let g:neomake_python_flake8_maker = {
@@ -201,3 +211,7 @@ endif
 
 " VIM-AIRLINE symbols
 let g:airline_powerline_fonts = 1
+
+" Supertab
+let g:SuperTabContextDefaultCompletionType = "<c-n>"
+let g:SuperTabDefaultCompletionType = "context"
