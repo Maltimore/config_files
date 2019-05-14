@@ -151,3 +151,7 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+if [ -e ~/.local_config.sh ]; then
+	source ~/.local_config.sh
+fi
