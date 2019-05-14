@@ -1,0 +1,2 @@
+$pdf_mode = 1;        # tex -> pdf
+$cleanup_mode = 2;    # soll eigentlichd die .bbl, .aux etc dateien loeschen, geht aber wohl nich

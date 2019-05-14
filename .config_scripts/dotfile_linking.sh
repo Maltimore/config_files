@@ -11,5 +11,6 @@ pythonrc.py
 screenrc
 tmux.conf
 vimrc
+latexmkrc
 EOF
 
