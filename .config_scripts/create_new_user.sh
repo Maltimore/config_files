@@ -26,8 +26,9 @@ git checkout master         # back to local master branch,
 
 ####################################################################################################
 # MINICONDA
-# for the time being, we have to install bzip2 manually (likely to change in the future)
-sudo apt-get -y install bzip2
+## for the time being, we have to install bzip2 manually (likely to change in the future)
+## I disabled this 2019-06-25 without checking whether it's still needed (but hope not)
+#sudo apt-get -y install bzip2
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh 
 bash Miniconda3-latest-Linux-x86_64.sh
 
