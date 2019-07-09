@@ -1,3 +1,5 @@
+backend: Agg
+
 # latex
 #text.latex.preamble : \usepackage{amsmath}, \usepackage{amssymb}, \usepackage{cmbright}
 #text.usetex         : True
