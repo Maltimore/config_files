@@ -106,15 +106,6 @@ let g:Tex_IgnoredWarnings =
 	\'Font Warning'."\n"
 let g:Tex_IgnoreLevel = 8
 
-" IPYTHON
-let g:nvim_ipy_perform_mappings = 0
-map <silent> <c-h> <Plug>(IPy-Run)
-map <silent> <c-j> <Plug>(IPy-RunCell)
-" run entire buffer with Ipython plugin
-"map <silent> ra <esc>ggVGrr<c-o>
-" terminate kernel
-map <silent> <c-k> <Plug>(IPy-Terminate)
-
 " NEOVIM
 " specifically for neovim:
 if has('nvim')
@@ -131,11 +122,6 @@ if has('nvim')
 	" set inccommand=nosplit
 	let g:terminal_scrollback_buffer_size = 100000
 endif
-
-" VIM-SESSION
-" let the vim-session plugin not ask to save/load every session
-:let g:session_autoload = "no"
-:let g:session_autosave = 'no'
 
 " Markdown previewer
 " note: hotkey for viewing is <c-p>
@@ -191,9 +177,6 @@ let g:indentLine_fileTypeExclude = ['tex', 'markdown']
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
-
-" VIM-AIRLINE symbols
-let g:airline_powerline_fonts = 1
 
 " Supertab
 let g:SuperTabContextDefaultCompletionType = "<c-n>"
