@@ -129,7 +129,7 @@ let vim_markdown_preview_github=1
 
 " SYNTAX HIGHLIGHTING
 set background=dark
-colorscheme solarized8
+colorscheme solarized8_low
 
 " CtrlP (fuzzy file search)
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
