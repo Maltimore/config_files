@@ -73,14 +73,8 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-latex/vim-latex'
-" Plugin 'tpope/vim-surround'
-Plugin 'bfredl/nvim-ipy'
 Plugin 'davidhalter/jedi-vim'
-" Plugin 'vim-airline/vim-airline'
 Plugin 'vim-scripts/IndexedSearch'
-" Plugin 'gcmt/taboo.vim'
-" Plugin 'xolox/vim-misc'
-" Plugin 'xolox/vim-session'
 Plugin 'mileszs/ack.vim'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'neomake/neomake'
@@ -89,10 +83,11 @@ if has('nvim')
 else
 	Plugin 'lifepillar/vim-solarized8'
 endif
+" supertab is somehow necessary for the coompletions windows or
+" doc windows
 Plugin 'ervandew/supertab'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'heavenshell/vim-pydocstring'
-" Plugin 'junegunn/vim-easy-align'
 " indentLine is to show the tabstops for indentation as a dotted line
 Plugin 'Yggdroot/indentLine'
 call vundle#end()
