@@ -89,16 +89,18 @@ Plug 'davidhalter/jedi-vim'
 Plug 'vim-scripts/IndexedSearch'
 Plug 'mileszs/ack.vim'
 Plug 'JamshedVesuna/vim-markdown-preview'
-Plug 'neomake/neomake'
 Plug 'lifepillar/vim-solarized8'
-" supertab is somehow necessary for the coompletions windows or
+" supertab is somehow necessary for the completions windows or
 " doc windows
 Plug 'ervandew/supertab'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'heavenshell/vim-pydocstring'
 " indentLine is to show the tabstops for indentation as a dotted line
 Plug 'Yggdroot/indentLine'
-" Initialize plugin system
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 call plug#end()
 
 " VIM-LATEX
@@ -168,20 +170,6 @@ let g:jedi#show_call_signatures = 1
 " such that hitting tab will select the first one
 let g:jedi#popup_select_first = 0
 
-" NEOMAKE
-let g:neomake_python_flake8_maker = {
-	\ 'exe': $HOME . '/miniconda3/bin/flake8',
-    \ 'args': ['--ignore=E111,E113,E116,E126,E127,E221,E222,E266,E265,E402,E241,E201,E203,E501,E702,E741,E999,W504',  '--format=default', '--max-line-length=100'],
-    \ 'errorformat':
-        \ '%E%f:%l: could not compile,%-Z%p^,' .
-        \ '%A%f:%l:%c: %t%n %m,' .
-        \ '%A%f:%l: %t%n %m,' .
-        \ '%-G%.%#',
-    \ }
-let g:neomake_python_enabled_makers = ['flake8']
-" run :Neomake every time I save or open a file
-autocmd! BufWritePost,BufEnter * Neomake
-
 " INDENTLINE
 " do not use for latex, markdown
 let g:indentLine_fileTypeExclude = ['tex', 'markdown']
@@ -194,3 +182,9 @@ endif
 " Supertab
 let g:SuperTabContextDefaultCompletionType = "<c-n>"
 let g:SuperTabDefaultCompletionType = "context"
+
+" LanguageClient-neovim
+let g:LanguageClient_serverCommands = {
+    \ 'python': ['/home/maltimore/miniconda3/bin/pyls'],
+    \ }
+let g:LanguageClient_settingsPath = "/home/maltimore/.config/LanguageClient-neovim_LSP-server-settings.json"
