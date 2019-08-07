@@ -66,27 +66,27 @@ set completeopt=menu
 " make opening the .vimrc easier
 nnoremap <leader>ev :e $MYVIMRC<CR>
 
-" VUNDLE
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'vim-latex/vim-latex'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'vim-scripts/IndexedSearch'
-Plugin 'mileszs/ack.vim'
-Plugin 'JamshedVesuna/vim-markdown-preview'
-Plugin 'neomake/neomake'
-Plugin 'lifepillar/vim-solarized8'
+" vim-plug plugins
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.local/share/nvim/plugged')
+Plug 'vim-latex/vim-latex'
+Plug 'davidhalter/jedi-vim'
+Plug 'vim-scripts/IndexedSearch'
+Plug 'mileszs/ack.vim'
+Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'neomake/neomake'
+Plug 'lifepillar/vim-solarized8'
 " supertab is somehow necessary for the coompletions windows or
 " doc windows
-Plugin 'ervandew/supertab'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'heavenshell/vim-pydocstring'
+Plug 'ervandew/supertab'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'heavenshell/vim-pydocstring'
 " indentLine is to show the tabstops for indentation as a dotted line
-Plugin 'Yggdroot/indentLine'
-call vundle#end()
+Plug 'Yggdroot/indentLine'
+" Initialize plugin system
+call plug#end()
 
 " VIM-LATEX
 " REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
