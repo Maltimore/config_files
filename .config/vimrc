@@ -95,8 +95,6 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'ervandew/supertab'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'heavenshell/vim-pydocstring'
-" indentLine is to show the tabstops for indentation as a dotted line
-Plug 'Yggdroot/indentLine'
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
@@ -169,10 +167,6 @@ let g:jedi#show_call_signatures = 1
 " in autocompletion, automatically select the first line. I set this to false
 " such that hitting tab will select the first one
 let g:jedi#popup_select_first = 0
-
-" INDENTLINE
-" do not use for latex, markdown
-let g:indentLine_fileTypeExclude = ['tex', 'markdown']
 
 " ACK.VIM
 if executable('ag')
