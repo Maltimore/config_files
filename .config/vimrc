@@ -63,6 +63,7 @@ set completeopt=menu
 " make opening the .vimrc easier
 nnoremap <leader>ev :e $MYVIMRC<CR>
 
+" auto-install vim-plug if it isn't installed yet
 if has('nvim')
   if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
     silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
@@ -85,7 +86,7 @@ else
   call plug#begin('~/.vim/plugged')
 endif
 Plug 'vim-latex/vim-latex'
-Plug 'davidhalter/jedi-vim'
+" Plug 'davidhalter/jedi-vim'
 Plug 'vim-scripts/IndexedSearch'
 Plug 'mileszs/ack.vim'
 Plug 'JamshedVesuna/vim-markdown-preview'
@@ -99,6 +100,12 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
+" if has('nvim')
+"     Plug 'shougo/deoplete.nvim', {
+"         \ 'tag': '4.1',
+"         \ 'do': ':UpdateRemotePlugins',
+"         \ }
+" endif
 call plug#end()
 
 " VIM-LATEX
@@ -153,20 +160,20 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
-" JEDI-VIM
-" force python version
-let g:jedi#force_py_version = 3
-" jedi-vim should not complete at all, I just want the other features
-" let g:jedi#completions_enabled = 0
-" set the delay in ms until jedi-vim shows call signatures
-let g:jedi#show_call_signatures_delay = 100
-" where to show the call signatures (0: not at all, 1: in a popup, 2: in the
-" command line
-let showmode = 0
-let g:jedi#show_call_signatures = 1
-" in autocompletion, automatically select the first line. I set this to false
-" such that hitting tab will select the first one
-let g:jedi#popup_select_first = 0
+" " JEDI-VIM
+" " force python version
+" let g:jedi#force_py_version = 3
+" " jedi-vim should not complete at all, I just want the other features
+" " let g:jedi#completions_enabled = 0
+" " set the delay in ms until jedi-vim shows call signatures
+" let g:jedi#show_call_signatures_delay = 100
+" " where to show the call signatures (0: not at all, 1: in a popup, 2: in the
+" " command line
+" let showmode = 0
+" let g:jedi#show_call_signatures = 1
+" " in autocompletion, automatically select the first line. I set this to false
+" " such that hitting tab will select the first one
+" let g:jedi#popup_select_first = 0
 
 " ACK.VIM
 if executable('ag')
@@ -182,3 +189,6 @@ let g:LanguageClient_serverCommands = {
     \ 'python': ['/home/maltimore/miniconda3/bin/pyls'],
     \ }
 let g:LanguageClient_settingsPath = "/home/maltimore/.config/LanguageClient-neovim_LSP-server-settings.json"
+
+" deoplete
+" let g:deoplete#enable_at_startup = 1
