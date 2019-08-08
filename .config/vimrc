@@ -191,9 +191,9 @@ let g:SuperTabClosePreviewOnPopupClose = 1
 
 " LanguageClient-neovim
 let g:LanguageClient_serverCommands = {
-    \ 'python': ['/home/maltimore/miniconda3/bin/pyls'],
+    \ 'python': ['~/miniconda3/bin/pyls'],
     \ }
-let g:LanguageClient_settingsPath = "/home/maltimore/.config/LanguageClient-neovim_LSP-server-settings.json"
+let g:LanguageClient_settingsPath = "~/.config/LanguageClient-neovim_LSP-server-settings.json"
 " opens the documentation of the object under the cursor
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 " goes to the source code of the object under the cursor
