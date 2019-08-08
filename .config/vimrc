@@ -99,7 +99,6 @@ Plug 'lifepillar/vim-solarized8'
 " doc windows
 Plug 'ervandew/supertab'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'heavenshell/vim-pydocstring'
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
