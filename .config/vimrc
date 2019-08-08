@@ -48,6 +48,8 @@ augroup END
 " do not show the docstring window. To show the docstring window, need to
 " (also) select preview here (comma separated list)
 set completeopt=menu
+" make it such that the mode is not shown in the command line
+set noshowmode
 
 " REMAPPING
 " remap o so that it doesn't go to insert mode
@@ -102,12 +104,13 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
-" if has('nvim')
-"     Plug 'shougo/deoplete.nvim', {
-"         \ 'tag': '4.1',
-"         \ 'do': ':UpdateRemotePlugins',
-"         \ }
-" endif
+if has('nvim')
+    Plug 'shougo/deoplete.nvim', {
+        \ 'tag': '4.1',
+        \ 'do': ':UpdateRemotePlugins',
+        \ }
+endif
+Plug 'Shougo/echodoc.vim'
 call plug#end()
 
 " VIM-LATEX
@@ -198,4 +201,8 @@ nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 
 " deoplete
-" let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_at_startup = 1
+
+" echodoc
+let g:echodoc#enable_at_startup = 1
+let g:echodoc#type = 'echo'
