@@ -12,7 +12,7 @@ git config --global core.editor "vi"
 
 cd ~
 git init
-git remote add origin https://github.com/Maltimore/config_files.git
+git remote add origin git@github.com:Maltimore/config_files.git
 # the following is a hacky workaround to replace all current config
 # files with the ones from the repository (normal merge impossible
 # due to untracked changes)
