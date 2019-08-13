@@ -4,7 +4,7 @@ sudo apt-get update
 ####################################################################################################
 # GIT 
 sudo apt-get -y install git-core
-git config --global user.name "maltimore"
+git config --global user.name "Maltimore"
 git config --global user.email "malte@esders.info"
 # ignore some warning for a change to git 2.x
 git config --global push.default simple
