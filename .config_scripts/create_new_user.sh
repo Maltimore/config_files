@@ -38,7 +38,6 @@ sudo apt install -y silversearcher-ag
 
 # use this repository to link the dotfiles from ~ to ~/.config
 bash ~/.config_scripts/dotfile_linking.sh
-source ~/.bashrc
 
 # how to change the ipython color profile
 # run "ipython profile create"
