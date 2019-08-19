@@ -5,7 +5,7 @@ sudo apt update
 # GIT 
 sudo apt -y install git
 git config --global user.name "Maltimore"
-git config --global user.email "malte@esders.info"
+git config --global user.email "git@maltimore.info"
 # in order to ignore some warning
 git config --global push.default simple
 git config --global core.editor "vi"
