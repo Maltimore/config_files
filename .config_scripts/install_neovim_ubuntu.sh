@@ -17,5 +17,7 @@ pip install grip
 conda install python-language-server
 
 # for vim-plug
+# just to be sure we install curl first
+sudo apt install -y curl
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
