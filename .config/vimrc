@@ -152,6 +152,7 @@ endif
 let vim_markdown_preview_github=1
 
 " SYNTAX HIGHLIGHTING
+" vim-solarized8
 set background=dark
 colorscheme solarized8
 
