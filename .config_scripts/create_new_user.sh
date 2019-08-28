@@ -1,12 +1,12 @@
 #!/bin/bash
-sudo apt-get update
+sudo apt update
 
 ####################################################################################################
 # GIT 
-sudo apt-get -y install git-core
-git config --global user.name "maltimore"
-git config --global user.email "malte@esders.info"
-# ignore some warning for a change to git 2.x
+sudo apt -y install git
+git config --global user.name "Maltimore"
+git config --global user.email "git@maltimore.info"
+# in order to ignore some warning
 git config --global push.default simple
 git config --global core.editor "vi"
 
@@ -27,19 +27,17 @@ git checkout master         # back to local master branch,
 ####################################################################################################
 # MINICONDA
 ## for the time being, we have to install bzip2 manually (likely to change in the future)
-## I disabled this 2019-06-25 without checking whether it's still needed (but hope not)
-#sudo apt-get -y install bzip2
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh 
 bash Miniconda3-latest-Linux-x86_64.sh
 
 ####################################################################################################
 # smaller programs
-# TMUX
+sudo apt install -y curl
 sudo apt install -y tmux
-# AG
 sudo apt install -y silversearcher-ag
 
-source ~/.bashrc
+# use this repository to link the dotfiles from ~ to ~/.config
+bash ~/.config_scripts/dotfile_linking.sh
 
 # how to change the ipython color profile
 # run "ipython profile create"
