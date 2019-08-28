@@ -97,7 +97,6 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ }
 if has('nvim')
     Plug 'shougo/deoplete.nvim', {
-        \ 'tag': '4.1',
         \ 'do': ':UpdateRemotePlugins',
         \ }
 endif
