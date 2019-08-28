@@ -1,8 +1,14 @@
 #!/bin/bash
 # there are problems if the first file I edit with neovim is with "sudo nvim"
 
-# install neovim
-sudo apt install -y neovim
+# get the AppImage
+mkdir $HOME/programs
+#--location is to follow redirect)
+curl -o $HOME/programs/vim --location https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
+chmod u+x $HOME/programs/vim
+
+# install neovim (at the moment I'm rather getting the AppImage)
+#sudo apt install -y neovim
 # install the xclip program to be able to copy to system clipboard with "+y
 sudo apt install -y xclip
 # mouse compatibility
