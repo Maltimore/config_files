@@ -156,21 +156,6 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
-" " JEDI-VIM
-" " force python version
-" let g:jedi#force_py_version = 3
-" " jedi-vim should not complete at all, I just want the other features
-" " let g:jedi#completions_enabled = 0
-" " set the delay in ms until jedi-vim shows call signatures
-" let g:jedi#show_call_signatures_delay = 100
-" " where to show the call signatures (0: not at all, 1: in a popup, 2: in the
-" " command line
-" let showmode = 0
-" let g:jedi#show_call_signatures = 1
-" " in autocompletion, automatically select the first line. I set this to false
-" " such that hitting tab will select the first one
-" let g:jedi#popup_select_first = 0
-
 " ACK.VIM
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
