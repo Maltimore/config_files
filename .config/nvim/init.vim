@@ -128,7 +128,6 @@ if has('nvim')
 	set termguicolors
 	" go to normal mode with jk while in terminal
 	:tnoremap jk <C-\><C-n>
-	let g:python_host_prog = '/usr/bin/python'
 	let g:python3_host_prog = $HOME . '/miniconda3/bin/python'
 	" disable python 2 support
 	let g:loaded_python_provider = 1
