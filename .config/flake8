@@ -8,9 +8,11 @@ max-line-length = 120
 # E203: space before ':'
 # E221: multiple spaces before operator
 # E222: multiple whitespace before operator
+# E226: missing whitespace around operator
+# E231: missing whitespace after ','
 # E241: multiple spaces after ':'
 # E501: line too long
 # E702: multiple statements on one line
 # E999: unexpected indentation (yes these two (E113) both)
 # W504: binary operator before newline
-ignore = E111,E126,E127,E203,E221,E222,E241,E265,E266,E402,E501,E702,E999,W504
+ignore = E111,E126,E127,E203,E221,E222,E226,E231,E241,E265,E266,E402,E501,E702,E999,W504
