@@ -128,7 +128,6 @@ if has('nvim')
 	set termguicolors
 	" go to normal mode with jk while in terminal
 	:tnoremap jk <C-\><C-n>
-	let g:python_host_prog = '/usr/bin/python'
 	let g:python3_host_prog = $HOME . '/miniconda3/bin/python'
 	" disable python 2 support
 	let g:loaded_python_provider = 1
@@ -155,21 +154,6 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
-
-" " JEDI-VIM
-" " force python version
-" let g:jedi#force_py_version = 3
-" " jedi-vim should not complete at all, I just want the other features
-" " let g:jedi#completions_enabled = 0
-" " set the delay in ms until jedi-vim shows call signatures
-" let g:jedi#show_call_signatures_delay = 100
-" " where to show the call signatures (0: not at all, 1: in a popup, 2: in the
-" " command line
-" let showmode = 0
-" let g:jedi#show_call_signatures = 1
-" " in autocompletion, automatically select the first line. I set this to false
-" " such that hitting tab will select the first one
-" let g:jedi#popup_select_first = 0
 
 " ACK.VIM
 if executable('ag')
