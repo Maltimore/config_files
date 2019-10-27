@@ -119,13 +119,10 @@ fi
 ####################################################################################################
 # BEGIN OF NON-DEFAULT BASHRC
 
-# add the ~/.bin and ~/programs directory in the home folder to the path
+# add .bin and programs to PATH
 export PATH="$HOME"/.bin:"$HOME"/programs/:$PATH
 
 export EDITOR=vi
-
-export MKL_NUM_THREADS=1
-export OMP_NUM_THREADS=1
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -142,6 +139,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# if exists, load the local config which should not be managed by git
 if [ -e ~/.local_config.sh ]; then
 	source ~/.local_config.sh
 fi
