@@ -122,11 +122,6 @@ git_upd() {
 	git diff origin/master | ssh "${1}" " git -C '${2}' reset --hard origin/master; git -C '${2}' clean -df; git -C '${2}' apply - " 
 }
 
-# powerline
-if [ -f /usr/share/powerline/bindings/bash/powerline.sh ]; then
-	source /usr/share/powerline/bindings/bash/powerline.sh
-fi
-
 # source ~/.bash_aliases
 if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
