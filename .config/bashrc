@@ -122,22 +122,6 @@ fi
 # add the ~/.bin and ~/programs directory in the home folder to the path
 export PATH="$HOME"/.bin:"$HOME"/programs/:$PATH
 
-# COLORED PROMPT
-# Add git branch if its present to PS1
-parse_git_branch() {
- git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-}
-if [ "$color_prompt" = yes ]; then
- PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]$(parse_git_branch)\[\033[00m\]\$ '
-else
- PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(parse_git_branch)\$ '
-fi
-unset color_prompt force_color_prompt
-
-git_upd() {
-	git diff origin/master | ssh "${1}" " git -C '${2}' reset --hard origin/master; git -C '${2}' clean -df; git -C '${2}' apply - " 
-}
-
 export EDITOR=vi
 
 export MKL_NUM_THREADS=1
