@@ -90,7 +90,6 @@ Plug 'lifepillar/vim-solarized8'
 " supertab is somehow necessary for the completions windows or
 " doc windows
 Plug 'ervandew/supertab'
-Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
 " VIM-LATEX
