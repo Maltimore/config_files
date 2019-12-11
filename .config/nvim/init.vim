@@ -91,16 +91,6 @@ Plug 'lifepillar/vim-solarized8'
 " doc windows
 Plug 'ervandew/supertab'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
-if has('nvim')
-    Plug 'shougo/deoplete.nvim', {
-        \ 'do': ':UpdateRemotePlugins',
-        \ }
-endif
-Plug 'Shougo/echodoc.vim'
 call plug#end()
 
 " VIM-LATEX
