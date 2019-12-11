@@ -153,20 +153,3 @@ endif
 let g:SuperTabContextDefaultCompletionType = "<c-n>"
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabClosePreviewOnPopupClose = 1
-
-" LanguageClient-neovim
-let g:LanguageClient_serverCommands = {
-    \ 'python': ['~/miniconda3/bin/pyls'],
-    \ }
-let g:LanguageClient_settingsPath = "~/.config/LanguageClient-neovim_LSP-server-settings.json"
-" opens the documentation of the object under the cursor
-nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-" goes to the source code of the object under the cursor
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-
-" deoplete
-let g:deoplete#enable_at_startup = 1
-
-" echodoc
-let g:echodoc#enable_at_startup = 1
-let g:echodoc#type = 'floating'
