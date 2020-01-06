@@ -7,11 +7,6 @@
 " more bashlike behavior on hitting <tab>
 set wildmode=longest,list,full
 set wildmenu
-" reload the .vimrc after saving changes to it
-augroup myvimrc
-    au!
-    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
-augroup END
 " Jump to the last cursor position when reopening a file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
