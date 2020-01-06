@@ -1,6 +1,6 @@
 " OPTIONS
 " set tabstop width etc.
-:set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
+:set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 " show line numbering
 :set number
 " when opening a new file and typing the filename, this will give
