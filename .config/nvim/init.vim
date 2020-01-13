@@ -117,15 +117,6 @@ let vim_markdown_preview_github=1
 set background=dark
 colorscheme solarized8
 
-" CtrlP (fuzzy file search)
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-
-" VIM-EASY-ALIGN
-" Start interactive EasyAlign in visual mode (e.g. vipga)
-xmap ga <Plug>(EasyAlign)
-" Start interactive EasyAlign for a motion/text object (e.g. gaip)
-nmap ga <Plug>(EasyAlign)
-
 " ACK.VIM
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
