@@ -19,10 +19,6 @@ set mouse=a
 " make searching case insensitive when search string is only lowercase
 set ignorecase
 set smartcase
-" some plugins tries to remap the :E command, here we get it back
-if !exists(":E")
-	command E Ex
-endif
 " open help in an [only] window
 autocmd FileType help on
 " highlight search
