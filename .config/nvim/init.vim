@@ -19,8 +19,6 @@ set mouse=a
 " make searching case insensitive when search string is only lowercase
 set ignorecase
 set smartcase
-" jump to other windows when switching buffers
-set switchbuf=useopen,usetab
 " some plugins tries to remap the :E command, here we get it back
 if !exists(":E")
 	command E Ex
