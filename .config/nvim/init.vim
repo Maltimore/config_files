@@ -43,8 +43,6 @@ augroup END
 " do not show the docstring window. To show the docstring window, need to
 " (also) select preview here (comma separated list)
 set completeopt=menu
-" make it such that the mode is not shown in the command line
-set noshowmode
 
 " REMAPPING
 " remap jk to exit insert mode
