@@ -56,8 +56,6 @@ set noshowmode
 :vmap -# :s#^\###<cr>:noh<cr>
 " make opening the .vimrc easier
 nnoremap <leader>ev :e $MYVIMRC<CR>
-" close all preview windows with space
-nnoremap <silent> <SPACE> :pc<CR>
 
 " VIM-PLUG
 " auto-install vim-plug if it isn't installed yet
