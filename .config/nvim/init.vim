@@ -63,13 +63,11 @@ if has('nvim')
 else
   call plug#begin('~/.vim/plugged')
 endif
-" Plug 'davidhalter/jedi-vim'
 Plug 'vim-scripts/IndexedSearch'
 Plug 'mileszs/ack.vim'
 Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'lifepillar/vim-solarized8'
-" supertab is somehow necessary for the completions windows or
-" doc windows
+" supertab is somehow necessary for the completions or doc windows
 Plug 'ervandew/supertab'
 call plug#end()
 
@@ -84,8 +82,6 @@ if has('nvim')
 	" disable python 2 support
 	let g:loaded_python_provider = 1
 
-    " use neovims inccommand to highlight replacings
-	" set inccommand=nosplit
 	let g:terminal_scrollback_buffer_size = 100000
 endif
 
