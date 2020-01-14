@@ -63,7 +63,6 @@ if has('nvim')
 else
   call plug#begin('~/.vim/plugged')
 endif
-Plug 'vim-latex/vim-latex'
 " Plug 'davidhalter/jedi-vim'
 Plug 'vim-scripts/IndexedSearch'
 Plug 'mileszs/ack.vim'
@@ -73,24 +72,6 @@ Plug 'lifepillar/vim-solarized8'
 " doc windows
 Plug 'ervandew/supertab'
 call plug#end()
-
-" VIM-LATEX
-" REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
-filetype plugin on
-" IMPORTANT: grep will sometimes skip displaying the file name if you
-" search in a singe file. This will confuse Latex-Suite. Set your grep
-" program to always generate a file-name.
-set grepprg=grep\ -nH\ $*
-" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
-" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
-" The following changes the default filetype back to 'tex':
-let g:tex_flavor='latex'
-let g:Tex_DefaultTargetFormat = 'pdf'
-let g:Tex_MultipleCompileFormats='pdf, bib,pdf'
-" let latex suite ignore warnings from the tex compiler
-let g:Tex_IgnoredWarnings = 
-	\'Font Warning'."\n"
-let g:Tex_IgnoreLevel = 8
 
 " NEOVIM
 " specifically for neovim:
