@@ -120,8 +120,7 @@ fi
 # BEGIN OF NON-DEFAULT BASHRC
 
 # add .bin and programs to PATH
-export PATH="$HOME"/.bin:"$HOME"/programs/:$PATH
-
+export PATH="$HOME"/.local/bin:"$HOME"/programs/:$PATH
 export EDITOR=vi
 
 # >>> conda initialize >>>
