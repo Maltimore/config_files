@@ -35,6 +35,10 @@ augroup END
 " do not show the docstring window. To show the docstring window, need to
 " (also) select preview here (comma separated list)
 set completeopt=menu
+" go to insert mode when creating a terminal buffer
+autocmd TermOpen * startinsert
+" go to insert mode when switching to terminal buffer
+autocmd BufEnter * if &buftype == 'terminal' | exec "normal i" | endif
 
 " REMAPPING
 " remap jk to exit insert mode
