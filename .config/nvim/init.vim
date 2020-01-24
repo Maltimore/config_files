@@ -6,10 +6,8 @@
 set wildmode=longest,list,full
 set wildmenu
 " Jump to the last cursor position when reopening a file
-if has("autocmd")
-  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-    \| exe "normal! g'\"" | endif
-endif
+autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+  \| exe "normal! g'\"" | endif
 " Let the explore mode (file tree) be in NERDTree style
 let g:netrw_liststyle=3 
 " mouse interoperability
