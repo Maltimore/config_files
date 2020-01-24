@@ -41,8 +41,8 @@ set completeopt=menu
 " REMAPPING
 " remap jk to exit insert mode
 :imap jk <C-[>
-" remap sl so that i can use it for the command to switch windows
-:nmap sl <C-w>
+" remap s so that i can use it for the command to switch windows
+:nmap s <C-w>
 " make it easier to comment lines in python
 :vmap  # :s#^#\##<cr>:noh<cr>
 :vmap -# :s#^\###<cr>:noh<cr>
