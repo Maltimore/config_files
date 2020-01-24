@@ -1,8 +1,6 @@
 " OPTIONS
 " set tabstop width etc.
 :set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
-" show line numbering
-:set number
 " when opening a new file and typing the filename, this will give
 " more bashlike behavior on hitting <tab>
 set wildmode=longest,list,full
