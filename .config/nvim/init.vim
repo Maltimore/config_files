@@ -36,7 +36,7 @@ set completeopt=menu
 " go to insert mode when creating a terminal buffer
 autocmd TermOpen * startinsert
 " go to insert mode when switching to terminal buffer
-autocmd BufEnter * if &buftype == 'terminal' | exec "normal i" | endif
+autocmd BufEnter * if &buftype == 'terminal' | startinsert | endif
 
 " REMAPPING
 " remap jk to exit insert mode
