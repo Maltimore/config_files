@@ -142,3 +142,10 @@ unset __conda_setup
 if [ -e ~/.local_config.sh ]; then
 	source ~/.local_config.sh
 fi
+
+# univa/sun grid engine does not set $XDG_RUNTIME_DIR, but this is needed
+# for instance for matplotlib
+if ! [ -v XDG_RUNTIME_DIR ]; then
+    export XDG_RUNTIME_DIR=/tmp/maltes_runtime_dir
+    mkdir -p --mode=0700 $XDG_RUNTIME_DIR
+fi
