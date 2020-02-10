@@ -80,7 +80,7 @@ if has('nvim')
 	:tnoremap jk <C-\><C-n>
 	let g:python3_host_prog = $HOME . '/miniconda3/bin/python'
 	" disable python 2 support
-	let g:loaded_python_provider = 1
+	let g:loaded_python_provider = 0
 
 	let g:terminal_scrollback_buffer_size = 100000
 endif
