@@ -1,5 +1,6 @@
 #!/bin/bash
 # all this does is create symlinks from each config file listed below to $HOME/.config/<configfile>
+# (though it does add a dot before the filename)
 # no config files are being moved or deleted
 echo linking config files
 echo  
@@ -14,5 +15,6 @@ pythonrc.py
 screenrc
 tmux.conf
 latexmkrc
+pdbrc.py
 EOF
 
