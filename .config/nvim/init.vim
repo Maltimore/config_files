@@ -37,6 +37,19 @@ set completeopt=menu
 autocmd TermOpen * startinsert
 " go to insert mode when switching to terminal buffer
 autocmd BufEnter * if &buftype == 'terminal' | startinsert | endif
+" NEOVIM
+" specifically for neovim:
+if has('nvim')
+	" use 24 bit color
+	set termguicolors
+	" go to normal mode with jk while in terminal
+	:tnoremap jk <C-\><C-n>
+	let g:python3_host_prog = $HOME . '/miniconda3/bin/python'
+	" disable python 2 support
+	let g:loaded_python_provider = 0
+
+	let g:terminal_scrollback_buffer_size = 100000
+endif
 
 " REMAPPING
 " remap jk to exit insert mode
@@ -70,20 +83,6 @@ Plug 'lifepillar/vim-solarized8'
 " supertab is somehow necessary for the completions or doc windows
 Plug 'ervandew/supertab'
 call plug#end()
-
-" NEOVIM
-" specifically for neovim:
-if has('nvim')
-	" use 24 bit color
-	set termguicolors
-	" go to normal mode with jk while in terminal
-	:tnoremap jk <C-\><C-n>
-	let g:python3_host_prog = $HOME . '/miniconda3/bin/python'
-	" disable python 2 support
-	let g:loaded_python_provider = 0
-
-	let g:terminal_scrollback_buffer_size = 100000
-endif
 
 " Markdown previewer
 " note: hotkey for viewing is <c-p>
