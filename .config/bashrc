@@ -150,3 +150,10 @@ if ! [ -v XDG_RUNTIME_DIR ]; then
     export XDG_RUNTIME_DIR=/tmp/maltes_runtime_dir
     mkdir -p --mode=0700 $XDG_RUNTIME_DIR
 fi
+
+# if the environment variable TMUX is not set, try to create a
+# new session by the name main. However, if an unattached session
+# with name main already exists, attach to that
+if ! [ -v TMUX ]; then
+    tmux new-session -A -s main
+fi
