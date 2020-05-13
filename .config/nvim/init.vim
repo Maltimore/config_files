@@ -82,6 +82,7 @@ Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'lifepillar/vim-solarized8'
 " supertab is somehow necessary for the completions or doc windows
 Plug 'ervandew/supertab'
+Plug 'neomake/neomake'
 call plug#end()
 
 " Markdown previewer
@@ -102,3 +103,17 @@ endif
 let g:SuperTabContextDefaultCompletionType = "<c-n>"
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabClosePreviewOnPopupClose = 1
+
+" NEOMAKE
+let g:neomake_python_flake8_maker = {
+	\ 'exe': $HOME . '/miniconda3/bin/flake8',
+    \ 'args': ['--ignore=E111,E113,E116,E126,E127,E221,E222,E266,E265,E402,E241,E201,E203,E501,E702,E741,E999,W504',  '--format=default', '--max-line-length=100'],
+    \ 'errorformat':
+        \ '%E%f:%l: could not compile,%-Z%p^,' .
+        \ '%A%f:%l:%c: %t%n %m,' .
+        \ '%A%f:%l: %t%n %m,' .
+        \ '%-G%.%#',
+    \ }
+let g:neomake_python_enabled_makers = ['flake8']
+" run :Neomake every time I save or open a file
+autocmd! BufWritePost,BufEnter * Neomake
