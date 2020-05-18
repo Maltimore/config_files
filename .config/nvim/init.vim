@@ -39,6 +39,9 @@ autocmd TermOpen * startinsert
 autocmd BufEnter * if &buftype == 'terminal' | startinsert | endif
 " highlight the current line
 set cursorline
+" always show n lines above/below cursor (unless impossible when at
+" beginning/end of file)
+set scrolloff=10
 " NEOVIM
 " specifically for neovim:
 if has('nvim')
