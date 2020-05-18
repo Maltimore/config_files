@@ -37,6 +37,8 @@ set completeopt=menu
 autocmd TermOpen * startinsert
 " go to insert mode when switching to terminal buffer
 autocmd BufEnter * if &buftype == 'terminal' | startinsert | endif
+" highlight the current line
+set cursorline
 " NEOVIM
 " specifically for neovim:
 if has('nvim')
