@@ -42,6 +42,11 @@ set cursorline
 " always show n lines above/below cursor (unless impossible when at
 " beginning/end of file)
 set scrolloff=10
+" line numbers
+set number
+" relative line numbers
+set relativenumber
+
 " NEOVIM
 " specifically for neovim:
 if has('nvim')
