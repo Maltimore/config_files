@@ -140,8 +140,8 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # if exists, load the local config which should not be managed by git
-if [ -e ~/.local_config.sh ]; then
-	source ~/.local_config.sh
+if [ -e ~/.config/local_config.sh ]; then
+	source ~/.config/local_config.sh
 fi
 
 # univa/sun grid engine does not set $XDG_RUNTIME_DIR, but this is needed
