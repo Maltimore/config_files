@@ -44,8 +44,6 @@ set cursorline
 set scrolloff=10
 " line numbers
 set number
-" relative line numbers
-set relativenumber
 
 " NEOVIM
 " specifically for neovim:
