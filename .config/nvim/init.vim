@@ -93,6 +93,8 @@ Plug 'lifepillar/vim-solarized8'
 " supertab is somehow necessary for the completions or doc windows
 Plug 'ervandew/supertab'
 Plug 'neomake/neomake'
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
 call plug#end()
 
 " Markdown previewer
