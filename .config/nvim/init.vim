@@ -55,7 +55,7 @@ if has('nvim')
 	let g:python3_host_prog = $HOME . '/miniconda3/bin/python'
 	" disable python 2 support
 	let g:loaded_python_provider = 0
-
+    " scrollback buffer of nvim terminal
 	let g:terminal_scrollback_buffer_size = 100000
 endif
 
@@ -97,6 +97,8 @@ Plug 'ervandew/supertab'
 Plug 'neomake/neomake'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
+" Python code folding
+Plug 'tmhedberg/SimpylFold'
 call plug#end()
 
 " Markdown previewer
