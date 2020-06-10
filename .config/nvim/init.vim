@@ -73,6 +73,8 @@ nnoremap <leader>ev :e $MYVIMRC<CR>
 " the last ':<backspace>' is just for ':noh' not showing up in
 " the command line
 nnoremap <CR> :noh<CR><CR>:<backspace>
+" Map backspace to switch to the alternate buffer
+nnoremap <BS> <C-^>
 
 " VIM-PLUG
 " auto-install vim-plug if it isn't installed yet
