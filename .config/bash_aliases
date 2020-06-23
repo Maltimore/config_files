@@ -8,3 +8,6 @@ alias d='git diff'
 
 # temporarily
 alias nvim='maltimore_you_should_learn_to_use_vim_instead_of_nvim_as_a_command'
+
+# start tensorboard in the background and redirect its output
+alias tb='tensorboard --logdir=./ray_results > /tmp/tensorboard_output 2>&1 &'
