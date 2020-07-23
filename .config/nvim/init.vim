@@ -99,6 +99,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 " Python code folding
 Plug 'tmhedberg/SimpylFold'
+Plug 'Vimjas/vim-python-pep8-indent'
 call plug#end()
 
 " Markdown previewer
