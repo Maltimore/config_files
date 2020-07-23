@@ -94,11 +94,11 @@ Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'lifepillar/vim-solarized8'
 " supertab is somehow necessary for the completions or doc windows
 Plug 'ervandew/supertab'
+" (Python) code lint
 Plug 'neomake/neomake'
-Plug 'tpope/vim-fugitive'
-Plug 'junegunn/gv.vim'
 " Python code folding
 Plug 'tmhedberg/SimpylFold'
+" Python code indent
 Plug 'Vimjas/vim-python-pep8-indent'
 call plug#end()
 
