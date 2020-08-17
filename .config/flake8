@@ -13,6 +13,7 @@ max-line-length = 120
 # E241: multiple spaces after ':'
 # E501: line too long
 # E702: multiple statements on one line
+# E712: comparison to True should be 'if cond is True' or 'if cond' --> doesn't make sense because sometimes I want to know whether something is true-ish
 # E999: unexpected indentation (yes these two (E113) both)
 # W504: binary operator before newline
 ignore = E111,E126,E127,E203,E221,E222,E226,E231,E241,E265,E266,E402,E501,E702,E999,W504
