@@ -54,7 +54,7 @@ if has('nvim')
 	" disable python 2 support
 	let g:loaded_python_provider = 0
     " scrollback buffer of nvim terminal
-	let g:terminal_scrollback_buffer_size = 100000
+	let g:scrollback = -1  " -1 means 'really much'
 endif
 
 " REMAPPING
