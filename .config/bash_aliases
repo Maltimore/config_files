@@ -16,4 +16,4 @@ alias tb='tensorboard --logdir=./ray_results > /tmp/tensorboard_output 2>&1 &'
 alias uncommitted-changes-sync='(cd "$HOME"/repos/uncommitted-changes-sync; ./sync config > /tmp/uncommitted-changes-sync_log 2>&1) &'
 
 # start jupyterlab hidden
-alias jplab_hidden='jupyter lab > /tmp/jupyterlab_output 2>&1 &'
+alias jplab_hidden='jupyter lab > /tmp/jplab_hidden_output 2>&1 &'
