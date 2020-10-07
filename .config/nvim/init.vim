@@ -30,8 +30,10 @@ augroup PreviewOnBottom
     autocmd InsertEnter * set splitbelow
     autocmd InsertLeave * set splitbelow!
 augroup END
-" do not show the docstring window. To show the docstring window, need to
-" (also) select preview here (comma separated list)
+" do not show the docstring window on completion. I do not want this because
+" when the docstring window pops up, everything else is moved down. To show
+" the docstring window, need to (also) select preview here
+" (comma separated list)
 set completeopt=menu
 " go to insert mode when creating or switching to terminal buffer
 autocmd TermOpen,BufWinEnter * if &buftype == 'terminal' | startinsert | endif
