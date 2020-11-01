@@ -44,6 +44,8 @@ set cursorline
 set scrolloff=10
 " line numbers
 set number
+" when using { and }, do not open folds when jumping over them
+set foldopen-=block
 
 " NEOVIM
 " specifically for neovim:
