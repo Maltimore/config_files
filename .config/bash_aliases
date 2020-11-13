@@ -15,6 +15,9 @@ alias uncommitted-changes-sync='(cd "$HOME"/repos/uncommitted-changes-sync; ./sy
 # start jupyterlab hidden
 alias jplab_hidden='jupyter lab > /tmp/jplab_hidden_output 2>&1 &'
 
+# start tensorboard in the background and redirect its output
+alias tb='tensorboard --logdir="$HOME"/repos/proteinfolding/outfiles > /tmp/tensorboard_output 2>&1 &'
+
 # tensorboard port forwarding
 # -N for no remote commands
 # -f to put ssh into the background (I don't use this for now)
