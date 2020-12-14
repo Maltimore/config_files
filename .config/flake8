@@ -1,6 +1,6 @@
 [flake8]
 # NOTICE that flake8 options are also set in the .vimrc and neomake uses the ones in the .vimrc
-max-line-length = 120
+max-line-length = 100
 # E111: indentation not multiple of four
 # E113: unexpected indentation
 # E116: unexpected indentatino (comment)
