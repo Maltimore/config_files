@@ -22,4 +22,4 @@ alias tb='tensorboard --logdir="$HOME"/repos/proteinfolding/outfiles > /tmp/tens
 # -N for no remote commands
 # -f to put ssh into the background (I don't use this for now)
 # -L for port forwarding
-alias tbportforward='ssh -N -L 16006:localhost:6006 ida > /tmp/tbportforward_output 2>&1 &'
+alias tbportforward='ssh -N -L 16006:localhost:6008 ida > /tmp/tbportforward_output 2>&1 &'
