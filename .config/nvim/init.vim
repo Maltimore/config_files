@@ -46,6 +46,8 @@ set scrolloff=10
 set number
 " when using { and }, do not open folds when jumping over them
 set foldopen-=block
+" no line numbering in terminal
+au TermOpen * setlocal nonumber norelativenumber
 
 " NEOVIM
 " specifically for neovim:
