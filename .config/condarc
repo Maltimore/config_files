@@ -1,5 +1,4 @@
 changeps1: False
 channels:
-  - pytorch
   - conda-forge
   - defaults
