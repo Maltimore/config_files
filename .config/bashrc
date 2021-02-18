@@ -122,7 +122,11 @@ fi
 # add .bin and programs to PATH
 export PATH="$HOME"/.local/bin:"$HOME"/programs/:$PATH
 export PYTHONPATH="$HOME"/.local/bin:$PYTHONPATH
+
+# this tells some programs (like git I think) that you would like to edit things in vi mode
 export EDITOR=vi
+# this tells bash to use vi mode
+set -o vi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
