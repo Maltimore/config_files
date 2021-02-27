@@ -34,7 +34,7 @@ augroup END
 " when the docstring window pops up, everything else is moved down. To show
 " the docstring window, need to (also) select preview here
 " (comma separated list)
-set completeopt=menu
+set completeopt=menuone,noinsert,noselect
 " go to insert mode when creating or switching to terminal buffer
 autocmd TermOpen,BufWinEnter * if &buftype == 'terminal' | startinsert | endif
 " highlight the current line
@@ -110,14 +110,12 @@ Plug 'ervandew/supertab'
 Plug 'neomake/neomake'
 " Python code folding
 Plug 'tmhedberg/SimpylFold'
-" Python code indent
 Plug 'Vimjas/vim-python-pep8-indent'
-" orgmode
 Plug 'jceb/vim-orgmode'
-" vim-tex
 Plug 'lervag/vimtex'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'morhetz/gruvbox'
+Plug 'neovim/nvim-lspconfig'
 call plug#end()
 
 " Markdown previewer
@@ -137,8 +135,11 @@ if executable('ag')
 endif
 
 " Supertab
+" move through the completion options top to bottom
 let g:SuperTabContextDefaultCompletionType = "<c-n>"
+" determine how to complete based on the word before the cursor
 let g:SuperTabDefaultCompletionType = "context"
+" close the preview window (with docstring) after completion
 let g:SuperTabClosePreviewOnPopupClose = 1
 
 " NEOMAKE
@@ -162,8 +163,43 @@ let g:vimtex_fold_enabled=1
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "python", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  highlight = {
-    enable = true,              -- false will disable the whole extension
-  },
 }
 EOF
+
+
+" nvim-lspconfig
+" I'm not using palantir's python-language-server because it has multiple
+" problems that don't seem to get fixed by the developer. Biggest issue is
+" that it doesn't properly load flake8 configuration
+lua << EOF
+--local lspconfig = require'lspconfig'
+--lspconfig.pyls.setup{
+--  config = {
+--    name = 'palantir';
+--    settings = {
+--      pyls = {
+--        configurationSources = [[ 'flake8' ]];
+--        plugins = {
+--          mccabe = { enabled =  false};
+--          pycodestyle = { enabled = false};
+--          pyling = { enabled = false};
+--        };
+--      };
+--    };
+--  };
+--}
+require'lspconfig'.jedi_language_server.setup{}
+EOF
+" go to where the function/class has been implemented
+nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
+" Open the docstring in a hover window
+nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
+" we want to be able to show the signature help in both normal
+" and insert mode
+inoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+" get a quickfix window with all files/lines that reference the symbol under
+" the cursor
+nnoremap <silent> gR    <cmd>lua vim.lsp.buf.references()<CR>
+" rename all symbols that correspond to the one under the cursor
+nnoremap <silent> gr <cmd>lua vim.lsp.buf.rename()<CR>
