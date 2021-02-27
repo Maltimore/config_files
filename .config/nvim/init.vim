@@ -48,6 +48,12 @@ set number
 set foldopen-=block
 " no line numbering in terminal
 au TermOpen * setlocal nonumber norelativenumber
+" get a python debugger (pdb) - compatible representation of the current
+" cursor position into the clipboard. For instance src/main.py:26
+nnoremap <Leader>y :let @*=expand("%") . ':' . line(".")<CR>
+" write the python debugger (pdb) - compatible representation of the current
+" cursor position into a file /tmp/.pdbpreak
+nnoremap <Leader>t :call writefile(split('b ' . expand('%') . ':' . line("."), '\n'), '/tmp/.pdbreak')<CR>
 
 " NEOVIM
 " specifically for neovim:
