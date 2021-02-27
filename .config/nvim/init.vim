@@ -176,33 +176,21 @@ let g:tex_flavor = 'latex'
 let g:vimtex_fold_enabled=1
 
 " nvim-treesitter
+if has('nvim')
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "python", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
 }
 EOF
+endif
 
 
 " nvim-lspconfig
 " I'm not using palantir's python-language-server because it has multiple
 " problems that don't seem to get fixed by the developer. Biggest issue is
 " that it doesn't properly load flake8 configuration
+if has('nvim')
 lua << EOF
---local lspconfig = require'lspconfig'
---lspconfig.pyls.setup{
---  config = {
---    name = 'palantir';
---    settings = {
---      pyls = {
---        configurationSources = [[ 'flake8' ]];
---        plugins = {
---          mccabe = { enabled =  false};
---          pycodestyle = { enabled = false};
---          pyling = { enabled = false};
---        };
---      };
---    };
---  };
---}
 require'lspconfig'.jedi_language_server.setup{}
 EOF
+endif
