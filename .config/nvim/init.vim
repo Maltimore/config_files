@@ -67,6 +67,22 @@ if has('nvim')
 	let g:loaded_python_provider = 0
     " scrollback buffer of nvim terminal
 	let g:scrollback = -1  " -1 means 'really much'
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    " LSP config
+    " go to where the function/class has been implemented
+    nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
+    " Open the docstring in a hover window
+    nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
+    " we want to be able to show the signature help in both normal
+    " and insert mode
+    inoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+    nnoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+    " get a quickfix window with all files/lines that reference the symbol under
+    " the cursor
+    nnoremap <silent> gR    <cmd>lua vim.lsp.buf.references()<CR>
+    " rename all symbols that correspond to the one under the cursor
+    nnoremap <silent> gr <cmd>lua vim.lsp.buf.rename()<CR>
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 endif
 
 " REMAPPING
@@ -190,16 +206,3 @@ lua << EOF
 --}
 require'lspconfig'.jedi_language_server.setup{}
 EOF
-" go to where the function/class has been implemented
-nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
-" Open the docstring in a hover window
-nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
-" we want to be able to show the signature help in both normal
-" and insert mode
-inoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
-nnoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
-" get a quickfix window with all files/lines that reference the symbol under
-" the cursor
-nnoremap <silent> gR    <cmd>lua vim.lsp.buf.references()<CR>
-" rename all symbols that correspond to the one under the cursor
-nnoremap <silent> gr <cmd>lua vim.lsp.buf.rename()<CR>
