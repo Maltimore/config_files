@@ -103,7 +103,7 @@ endif
 Plug 'vim-scripts/IndexedSearch'
 Plug 'mileszs/ack.vim'
 Plug 'JamshedVesuna/vim-markdown-preview'
-Plug 'lifepillar/vim-solarized8'
+"Plug 'lifepillar/vim-solarized8'
 " supertab is somehow necessary for the completions or doc windows
 Plug 'ervandew/supertab'
 " (Python) code lint
@@ -116,6 +116,8 @@ Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'jceb/vim-orgmode'
 " vim-tex
 Plug 'lervag/vimtex'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'morhetz/gruvbox'
 call plug#end()
 
 " Markdown previewer
@@ -125,7 +127,9 @@ let vim_markdown_preview_github=1
 " SYNTAX HIGHLIGHTING
 " vim-solarized8
 set background=dark
-colorscheme solarized8
+"colorscheme solarized8_low
+autocmd vimenter * ++nested colorscheme gruvbox
+let gruvbox_contrast_dark="medium"
 
 " ACK.VIM
 if executable('ag')
@@ -153,3 +157,13 @@ autocmd! BufWritePost,BufEnter * Neomake
 " vim-tex
 let g:tex_flavor = 'latex'
 let g:vimtex_fold_enabled=1
+
+" nvim-treesitter
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "python", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  highlight = {
+    enable = true,              -- false will disable the whole extension
+  },
+}
+EOF
