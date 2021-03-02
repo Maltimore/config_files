@@ -1,6 +1,6 @@
 [flake8]
 # NOTICE that flake8 options are also set in the .vimrc and neomake uses the ones in the .vimrc
-max-line-length = 100
+max-line-length = 120
 # E111: indentation not multiple of four
 # E113: unexpected indentation
 # E116: unexpected indentatino (comment)
@@ -16,4 +16,4 @@ max-line-length = 100
 # E712: comparison to True should be 'if cond is True' or 'if cond' --> doesn't make sense because sometimes I want to know whether something is true-ish
 # E999: unexpected indentation (yes these two (E113) both)
 # W504: binary operator before newline
-ignore = E111,E126,E127,E203,E221,E222,E226,E231,E241,E265,E266,E402,E501,E702,E999,W504
+ignore = E111,E126,E127,E203,E221,E222,E231,E241,E265,E266,E402,E702,E999,W504
