@@ -69,6 +69,8 @@ if has('nvim')
 	let g:scrollback = -1  " -1 means 'really much'
     """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " LSP config
+    " use language server for completions in python files
+    autocmd Filetype python setlocal omnifunc=v:lua.vim.lsp.omnifunc
     " go to where the function/class has been implemented
     nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
     " Open the docstring in a hover window
