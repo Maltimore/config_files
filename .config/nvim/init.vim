@@ -196,6 +196,13 @@ endif
 " that it doesn't properly load flake8 configuration
 if has('nvim')
 lua << EOF
-require'lspconfig'.jedi_language_server.setup{}
+require'lspconfig'.jedi_language_server.setup{
+    init_options={
+        enable=true;
+        diagnostics={
+            enable=false;
+        }
+    }
+}
 EOF
 endif
