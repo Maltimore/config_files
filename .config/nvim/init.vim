@@ -171,7 +171,7 @@ let g:neomake_python_flake8_maker = {
     \ }
 let g:neomake_python_enabled_makers = ['flake8']
 " run :Neomake every time I save or open a file
-autocmd! BufWritePost,BufEnter * Neomake
+autocmd! BufWritePost * Neomake
 
 " vim-tex
 let g:tex_flavor = 'latex'
