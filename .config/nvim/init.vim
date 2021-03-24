@@ -100,7 +100,7 @@ nnoremap <leader>ev :e $MYVIMRC<CR>
 " This unsets the 'last search pattern' register by hitting return
 " the last ':<backspace>' is just for ':noh' not showing up in
 " the command line
-nnoremap <CR> :noh<CR><CR>:<backspace>
+nnoremap <CR> :noh<CR>:<backspace>
 " Map backspace to switch to the alternate buffer
 nnoremap <BS> <C-^>
 
