@@ -34,7 +34,7 @@ augroup END
 " when the docstring window pops up, everything else is moved down. To show
 " the docstring window, need to (also) select preview here
 " (comma separated list)
-set completeopt=menuone,noinsert,noselect
+set completeopt=menu
 " go to insert mode when creating or switching to terminal buffer
 autocmd TermOpen,BufWinEnter * if &buftype == 'terminal' | startinsert | endif
 " highlight the current line
@@ -54,6 +54,9 @@ nnoremap <Leader>y :let @+=expand("%") . ':' . line(".")<CR>
 " write the python debugger (pdb) - compatible representation of the current
 " cursor position into a file /tmp/.pdbpreak
 nnoremap <Leader>t :call writefile(split('b ' . expand('%') . ':' . line("."), '\n'), '/tmp/.pdbreak')<CR>
+" highlight what you yank. Option higroup controls in which color the text is
+" yanked. Enter :hi to see all highlight groups
+au TextYankPost * silent! lua vim.highlight.on_yank {higroup="Visual", timeout=500}
 
 " NEOVIM
 " specifically for neovim:
