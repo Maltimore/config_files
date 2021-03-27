@@ -59,9 +59,17 @@ fi
 #if [ "$color_prompt" = yes ]; then
 #    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 #else
-PS1='\[\033[01;32m\]\D{%Y-%m-%d %H:%M:%S} \u@\h \w$(__git_ps1)\[\033[00m\]\n\$ '
+# text appearance variables
+clear_color='\[\033[0m'
+green='\[\033[32m'
+blue='\[\033[34m'
+bold='\[\033[01m'
+
+date='\]\D{%Y-%m-%d %H:%M:%S}'
+# the command __git_ps1 takes as argument a string how to format the output. I want it raw so I do only '%s'
+PS1="${blue}[ ${green}${date}${clear_color} ${blue}] [ ${green}\u@\h${clear_color} ${blue}] [ ${green}\w${clear_color} ${blue}] [ ${green}${bold}$(__git_ps1 '%s')${clear_color} ${blue}]${clear_color}\n\$ "
 #fi
-unset color_prompt force_color_prompt
+#unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir  ## maltimore: COMMENTED OUT AS I HAVE NO IDEA WHAT THIS IS FOR
 #case "$TERM" in
