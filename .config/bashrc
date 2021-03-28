@@ -67,7 +67,7 @@ bold='\[\033[01m'
 
 date='\]\D{%Y-%m-%d %H:%M:%S}'
 # the command __git_ps1 takes as argument a string how to format the output. I want it raw so I do only '%s'
-PS1="${blue}[ ${green}${date}${clear_color} ${blue}] [ ${green}\u@\h${clear_color} ${blue}] [ ${green}\w${clear_color} ${blue}] [ ${green}${bold}$(__git_ps1 '%s')${clear_color} ${blue}]${clear_color}\n\$ "
+PS1="${blue}[ ${green}${date}${clear_color} ${blue}] [ ${green}\u@\h${clear_color} ${blue}] [ ${green}\w${clear_color} ${blue}] [ ${green}${bold}"'$(__git_ps1 %s)'"${clear_color} ${blue}]${clear_color}\n\$ "
 #fi
 #unset color_prompt force_color_prompt
 
