@@ -16,5 +16,6 @@ screenrc
 tmux.conf
 latexmkrc
 pdbrc.py
+pdbrc
 EOF
 
