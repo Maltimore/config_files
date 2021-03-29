@@ -1,5 +1,5 @@
 font:
-  size: 18
+  size: 16
 
 window:
   # Blank space added around the window in pixels. This padding is not scaled
