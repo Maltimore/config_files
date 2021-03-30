@@ -8,7 +8,7 @@ git config --global user.name "Maltimore"
 git config --global user.email "git@maltimore.info"
 # in order to ignore some warning
 git config --global push.default simple
-git config --global core.editor "vi"
+git config --global core.editor "vim"
 
 cd ~
 git init
