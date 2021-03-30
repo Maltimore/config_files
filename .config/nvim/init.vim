@@ -1,6 +1,6 @@
 " OPTIONS
 " set tabstop width etc.
-:set tabstop=4 softtabstop=0 shiftwidth=0 expandtab
+set tabstop=4 softtabstop=0 shiftwidth=0 expandtab
 " when opening a new file and typing the filename, this will give
 " more bashlike behavior on hitting <tab>
 set wildmode=longest,list,full
@@ -57,6 +57,17 @@ nnoremap <Leader>t :call writefile(split('b ' . expand('%') . ':' . line("."), '
 " highlight what you yank. Option higroup controls in which color the text is
 " yanked. Enter :hi to see all highlight groups
 au TextYankPost * silent! lua vim.highlight.on_yank {higroup="Visual", timeout=500}
+augroup yaml
+    au!
+    au BufNewFile,BufRead *.yaml set
+        \ tabstop=2
+        \ softtabstop=2
+        \ shiftwidth=2
+        \ expandtab
+        \ autoindent
+        \ fileformat=unix
+        \ foldmethod=indent
+augroup END
 
 " NEOVIM
 " specifically for neovim:
