@@ -23,17 +23,17 @@ set hlsearch
 set incsearch
 " make it possible to make an unwritten buffer hidden
 set hidden
-" make it possible to save with root rights
+" save with root rights with Sw
 command! -nargs=0 Sw w !sudo tee % > /dev/null
 " make it such that the preview window is opened below the current window
 augroup PreviewOnBottom
     autocmd InsertEnter * set splitbelow
     autocmd InsertLeave * set splitbelow!
 augroup END
-" do not show the docstring window on completion. I do not want this because
-" when the docstring window pops up, everything else is moved down. To show
-" the docstring window, need to (also) select preview here
-" (comma separated list)
+" do not show the docstring window on completion, which would happen with
+" completeopt=preview. I do not want this because when the docstring window
+" pops up, everything else is moved down. To show the docstring window, need
+" to (also) select preview here (comma separated list)
 set completeopt=menu
 " go to insert mode when creating or switching to terminal buffer
 autocmd TermOpen,BufWinEnter * if &buftype == 'terminal' | startinsert | endif
@@ -48,15 +48,10 @@ set number
 set foldopen-=block
 " no line numbering in terminal
 au TermOpen * setlocal nonumber norelativenumber
-" get a python debugger (pdb) - compatible representation of the current
-" cursor position into the clipboard. For instance src/main.py:26
-nnoremap <Leader>y :let @+=expand("%") . ':' . line(".")<CR>
-" write the python debugger (pdb) - compatible representation of the current
-" cursor position into a file /tmp/.pdbpreak
-nnoremap <Leader>t :call writefile(split('b ' . expand('%') . ':' . line("."), '\n'), '/tmp/.pdbreak')<CR>
 " highlight what you yank. Option higroup controls in which color the text is
 " yanked. Enter :hi to see all highlight groups
 au TextYankPost * silent! lua vim.highlight.on_yank {higroup="Visual", timeout=500}
+" this is mostly such that yaml indents with two spaces per tab
 augroup yaml
     au!
     au BufNewFile,BufRead *.yaml set
@@ -75,7 +70,7 @@ if has('nvim')
 	" use 24 bit color
 	set termguicolors
 	" go to normal mode with jk while in terminal
-	:tnoremap jk <C-\><C-n>
+	tnoremap jk <C-\><C-n>
 	let g:python3_host_prog = $HOME . '/miniconda3/bin/python'
 	" disable python 2 support
 	let g:loaded_python_provider = 0
@@ -103,12 +98,12 @@ endif
 
 " REMAPPING
 " remap jk to exit insert mode
-:imap jk <C-[>
+imap jk <C-[>
 " remap s so that i can use it for the command to switch windows
-:nmap s <C-w>
+nmap s <C-w>
 " make it easier to comment lines in python
-:vmap  # :s#^#\##<cr>:noh<cr>
-:vmap -# :s#^\###<cr>:noh<cr>
+vmap  # :s#^#\##<cr>:noh<cr>
+vmap -# :s#^\###<cr>:noh<cr>
 " make opening the .vimrc easier
 nnoremap <leader>ev :e $MYVIMRC<CR>
 " This unsets the 'last search pattern' register by hitting return
@@ -117,6 +112,9 @@ nnoremap <leader>ev :e $MYVIMRC<CR>
 nnoremap <CR> :noh<CR>:<backspace>
 " Map backspace to switch to the alternate buffer
 nnoremap <BS> <C-^>
+" get a python debugger (pdb) - compatible representation of the current
+" cursor position into the clipboard. For instance src/main.py:26
+nnoremap <Leader>y :let @+=expand("%") . ':' . line(".")<CR>
 
 " VIM-PLUG
 " auto-install vim-plug if it isn't installed yet
