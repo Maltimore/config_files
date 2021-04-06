@@ -1,0 +1,11 @@
+[user]
+	name = Maltimore
+	email = git@maltimore.info
+[push]
+	default = simple
+[core]
+	editor = vim
+[merge]
+    tool = vimdiff
+[mergetool "vimdiff"]
+    cmd = vim $MERGED

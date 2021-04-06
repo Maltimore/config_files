@@ -4,13 +4,9 @@ sudo apt update
 ####################################################################################################
 # GIT 
 sudo apt -y install git
-git config --global user.name "Maltimore"
-git config --global user.email "git@maltimore.info"
-# in order to ignore some warning
-git config --global push.default simple
-git config --global core.editor "vim"
 
-cd ~
+# doing || exit in case cd fails
+cd ~  || exit
 git init
 git remote add origin https://github.com/Maltimore/config_files.git
 # the following is a hacky workaround to replace all current config
