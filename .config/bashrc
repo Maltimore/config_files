@@ -60,14 +60,26 @@ fi
 #    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 #else
 # text appearance variables
-clear_color='\[\033[0m\]'
-green='\[\033[32m\]'
-blue='\[\033[34m\]'
-bold='\[\033[01m\]'
+function my_prompt_command
+{
+    clear_color='\[\033[0m\]'
+    green='\[\033[32m\]'
+    blue='\[\033[34m\]'
+    bold='\[\033[01m\]'
 
-date='\D{%Y-%m-%d %H:%M:%S}'
-# the command __git_ps1 takes as argument a string how to format the output. I want it raw so I do only '%s'
-PS1="${blue}[ ${green}${date}${clear_color} ${blue}] [ ${green}@\h${clear_color} ${blue}] [ ${green}\W${clear_color} ${blue}] [ ${green}${bold}\$(git rev-parse --abbrev-ref HEAD)${clear_color} ${blue}]${clear_color}\n\\\$ "
+    date='\D{%Y-%m-%d %H:%M:%S}'
+
+    ps1="${blue}[ ${green}${date}${clear_color} ${blue}] [ ${green}@\h${clear_color} ${blue}] [ ${green}\W${clear_color} ${blue}]${clear_color}"
+
+    # if we're in a git repository, add the git branch
+    if git rev-parse --abbrev-ref HEAD >/dev/null 2>/dev/null; then
+        git_branch=" ${blue}[ ${green}${bold}\$(git rev-parse --abbrev-ref HEAD)${clear_color} ${blue}]${clear_color}"
+        ps1="${ps1}${git_branch}"
+    fi
+    ps1="${ps1}\n\\\$ "
+    export PS1="${ps1}"
+}
+export PROMPT_COMMAND=my_prompt_command
 #fi
 #unset color_prompt force_color_prompt
 
