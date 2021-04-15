@@ -182,7 +182,7 @@ let g:neomake_python_flake8_maker = {
         \ '%-G%.%#',
     \ }
 let g:neomake_python_enabled_makers = ['flake8']
-" run :Neomake every time I save or open a file
+" run :Neomake every time I save a file
 autocmd! BufWritePost * Neomake
 
 " vim-tex
@@ -200,7 +200,6 @@ require'nvim-treesitter.configs'.setup {
 }
 EOF
 endif
-
 
 " nvim-lspconfig
 " I'm not using palantir's python-language-server because it has multiple
