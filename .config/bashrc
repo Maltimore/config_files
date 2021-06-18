@@ -168,13 +168,6 @@ if [ -e ~/.config/local_config.sh ]; then
 	source ~/.config/local_config.sh
 fi
 
-# univa/sun grid engine does not set $XDG_RUNTIME_DIR, but this is needed
-# for instance for matplotlib
-if ! [ -v XDG_RUNTIME_DIR ]; then
-    export XDG_RUNTIME_DIR=/tmp/maltes_runtime_dir
-    mkdir -p --mode=0700 $XDG_RUNTIME_DIR
-fi
-
 # if the environment variable TMUX is not set, try to create a
 # new session by the name main. However, if an unattached session
 # with name main already exists, attach to that
