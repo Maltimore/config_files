@@ -17,5 +17,6 @@ tmux.conf
 latexmkrc
 pdbrc.py
 pdbrc
+gitconfig
 EOF
 
