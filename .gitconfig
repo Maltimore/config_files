@@ -9,3 +9,5 @@
     tool = vimdiff
 [mergetool "vimdiff"]
     cmd = vim $MERGED
+[init]
+    defaultBranch = main
